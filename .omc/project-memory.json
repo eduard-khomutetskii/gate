@@ -1,0 +1,65 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1782993543763,
+  "projectRoot": "/Users/eduard/slider",
+  "techStack": {
+    "languages": [],
+    "frameworks": [],
+    "packageManager": null,
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [],
+    "gitBranches": null
+  },
+  "customNotes": [],
+  "directoryMap": {},
+  "hotPaths": [
+    {
+      "path": "script.js",
+      "accessCount": 17,
+      "lastAccessed": 1783052692296,
+      "type": "file"
+    },
+    {
+      "path": "styles.css",
+      "accessCount": 15,
+      "lastAccessed": 1783052571679,
+      "type": "file"
+    },
+    {
+      "path": "index.html",
+      "accessCount": 5,
+      "lastAccessed": 1783052654696,
+      "type": "file"
+    },
+    {
+      "path": "img.png",
+      "accessCount": 3,
+      "lastAccessed": 1782995102759,
+      "type": "file"
+    },
+    {
+      "path": "mobile.png",
+      "accessCount": 1,
+      "lastAccessed": 1782995302141,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}

@@ -1,0 +1,20 @@
+{
+  "task": "Change front-card leave animation to a downward drop per .omc/plans/card-leave-drop-animation.md",
+  "planPath": ".omc/plans/card-leave-drop-animation.md",
+  "stories": [
+    {
+      "id": "US-004",
+      "title": "Front-card leave animation drops downward instead of sliding sideways",
+      "acceptanceCriteria": [
+        "The oldPos === 0 keyframe branch in animateAdvance() (script.js) no longer contains translateX or rotate in its mid-transition keyframe",
+        "The mid-transition keyframe for the leaving card contains a positive translateY value (downward drop)",
+        "Only transform and opacity are keyframed (no other CSS properties animated)",
+        "Clicking dots 1->2->3->4->1 still updates front card content correctly each time (regression)",
+        "Rapid repeated clicking during an in-flight animation still does not desync stack order (isAnimating guard still effective)",
+        "No console errors on load or during transitions",
+        "A mid-animation screenshot shows the leaving card visibly offset downward from its resting pos-0 transform, not sideways"
+      ],
+      "passes": true
+    }
+  ]
+}
