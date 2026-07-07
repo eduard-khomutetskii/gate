@@ -571,7 +571,8 @@
   }
 
   .article__columns {
-    grid-template-columns: 1fr;
+    gap: 16px;
+    font-weight: 600;
   }
 
   .quote {
@@ -654,5 +655,45 @@
     width: 220px;
     height: 160px;
     scroll-snap-align: start;
+  }
+
+  .article-hero__title {
+    font-size: 21px;
+  }
+
+  .article-hero__lead,
+  .article__text,
+  .article__list,
+  .article__callout,
+  .gallery__caption {
+    font-size: 16px;
+  }
+
+  .article__list {
+    gap: 8px;
+  }
+
+  .article-hero__date {
+    font-size: 14px;
+  }
+
+  .article-hero {
+    min-height: 328px;
+  }
+
+  .toc__item, .article-hero__category, .breadcrumbs {
+    font-size: 12px;
+  }
+
+  .article__content {
+    gap: 16px;
+  }
+
+  .article__h2 {
+    font-size: 21px;
+  }
+
+  .article__columns--geo {
+    grid-template-columns: 1fr;
   }
 }
