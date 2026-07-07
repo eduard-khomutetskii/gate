@@ -11,7 +11,7 @@
 
   <main class="article">
 
-    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки" id="breadcrumbs">
       <a class="breadcrumbs__link" href="index.html">Блог</a>
       <span class="breadcrumbs__arrow" aria-hidden="true"><img src="assets/images/arrow-right.svg"></span>
       <span class="breadcrumbs__current">Комплаенс в AI-системах</span>
@@ -19,7 +19,7 @@
 
     <div class="article__layout">
 
-      <aside class="article__sidebar">
+      <aside class="article__sidebar" id="article-sidebar">
         <nav class="toc" aria-label="Содержание статьи">
           <a class="toc__item toc__item--active" href="#airport">Что делать в аэропорту</a>
           <a class="toc__item" href="#first-days">Как пережить первые дни без багажа</a>
@@ -30,7 +30,7 @@
 
       <div class="article__content">
 
-        <section class="article-hero">
+        <section class="article-hero" id="article-hero">
           <img class="article-hero__bg" src="assets/images/article-gallery.jpg" alt="">
           <div class="article-hero__top">
             <span class="article-hero__category">Комплаенс</span>
@@ -47,7 +47,7 @@
 
         <h2 class="article__h2" id="airport">Что делать в аэропорту</h2>
 
-        <ul class="article__list article__list--bullet">
+        <ul class="article__list article__list--bullet" id="list-with-bullet">
           <li>Отсутствие прозрачности решений моделей</li>
           <li>Нарушение политик безопасности данных</li>
           <li>Неконтролируемое поведение AI-агентов</li>
@@ -56,7 +56,7 @@
 
         <h2 class="article__h2">Что делать в аэропорту</h2>
 
-        <ul class="article__list article__list--dash">
+        <ul class="article__list article__list--dash" id="list-with-dash">
           <li>Отсутствие прозрачности решений моделей</li>
           <li>Нарушение политик безопасности данных</li>
           <li>Неконтролируемое поведение AI-агентов</li>
@@ -65,7 +65,7 @@
 
         <h2 class="article__h2" id="first-days">Ключевые риски</h2>
 
-        <ol class="article__list article__list--numbered">
+        <ol class="article__list article__list--numbered" id="list-with-numbered">
           <li>Отсутствие прозрачности решений моделей</li>
           <li>Нарушение политик безопасности данных</li>
           <li>Неконтролируемое поведение AI-агентов</li>
@@ -75,7 +75,7 @@
         <h2 class="article__h2">Ключевые риски</h2>
 
         <div class="article__columns">
-          <ul class="article__list article__list--bullet">
+          <ul class="article__list article__list--bullet" id="list-with-columns">
             <li>Отсутствие прозрачности решений моделей</li>
             <li>Нарушение политик безопасности данных</li>
             <li>Неконтролируемое поведение AI-агентов</li>
@@ -101,7 +101,7 @@
 
         <h2 class="article__h2">Галерея изображений</h2>
 
-        <figure class="gallery">
+        <figure class="gallery" id="gallery-single-view">
           <div class="gallery__viewport">
             <div class="gallery__track">
               <div class="gallery__slide">
@@ -122,7 +122,7 @@
           </div>
         </figure>
 
-        <figure class="gallery">
+        <figure class="gallery" id="gallery-tall">
           <div class="gallery__viewport">
             <div class="gallery__track">
               <div class="gallery__slide">
@@ -165,7 +165,7 @@
           </div>
         </figure>
 
-        <figure class="gallery">
+        <figure class="gallery" id="gallery-thumbs">
           <img class="gallery__img gallery__img--main" src="assets/images/article-gallery.jpg" alt="">
           <div class="gallery__thumbs">
             <button class="gallery__thumb gallery__thumb--active" type="button"><img src="assets/images/article-gallery.jpg" alt=""></button>
@@ -185,7 +185,7 @@
 
         <h2 class="article__h2" id="protect">Виды цитат</h2>
 
-        <blockquote class="quote">
+        <blockquote class="quote" id="quote-without-photo">
           <span class="quote__mark" aria-hidden="true">
             <img src="assets/images/dots.svg">
           </span>
@@ -196,7 +196,7 @@
           </div>
         </blockquote>
 
-        <blockquote class="quote quote--photo-left">
+        <blockquote class="quote quote--photo-left" id="quote-with-top-photo">
           <img class="quote__photo" src="assets/images/article-quote.jpg" alt="Валентина Селяковская">
           <div class="quote__body">
             <p class="quote__name">Валентина Селяковская</p>
@@ -208,7 +208,7 @@
           </span>
         </blockquote>
 
-        <blockquote class="quote quote--photo-right">
+        <blockquote class="quote quote--photo-right" id="quote-with-bottom-photo">
           <div class="quote__body">
             <span class="quote__mark" aria-hidden="true"><img src="assets/images/dots.svg"></span>
             <p class="quote__name">Валентина Селяковская</p>
@@ -220,14 +220,14 @@
 
         <h2 class="article__h2">Другие виды сущностей</h2>
 
-        <ul class="article__list article__list--icon">
+        <ul class="article__list article__list--icon" id="list-with-icon">
           <li><span class="icon-circle" aria-hidden="true"><img src="assets/images/note.svg"> </span>Отсутствие прозрачности решений моделей</li>
           <li><span class="icon-circle" aria-hidden="true"><img src="assets/images/note.svg"></span>Нарушение политик безопасности данных</li>
           <li><span class="icon-circle" aria-hidden="true"><img src="assets/images/note.svg"></span>Неконтролируемое поведение AI-агентов</li>
           <li><span class="icon-circle" aria-hidden="true"><img src="assets/images/note.svg"></span>Несоответствие внутренним и внешним требованиям</li>
         </ul>
 
-        <div class="pill-list">
+        <div class="pill-list" id="pill-list">
           <div class="pill"><span class="icon-circle" aria-hidden="true"><img src="assets/images/note.svg"></span>Отсутствие прозрачности решений моделей</div>
           <div class="pill"><span class="icon-circle" aria-hidden="true"><img src="assets/images/note.svg"></span>Нарушение политик безопасности данных</div>
           <div class="pill"><span class="icon-circle" aria-hidden="true"><img src="assets/images/note.svg"></span>Неконтролируемое поведение AI-агентов</div>
@@ -239,7 +239,7 @@
           <p>AI-системы ускоряют процессы, но одновременно создают новые риски: от утечек данных до непрозрачных решений моделей. Комплаенс перестаёт быть формальностью — это операционная необходимость.</p>
         </div>
 
-        <div class="article__columns article__columns--geo">
+        <div class="article__columns article__columns--geo" id="geo-columns">
           <div class="geo">
             <h3 class="article__h3">География</h3>
             <p class="article__text">Москва, Санкт-Петербург, Казань, Нижний Новгород, Ростов-на-Дону</p>
@@ -257,7 +257,7 @@
             </div>
           </div>
         </div>
-        <div class="pill-list pill-list_cols">
+        <div class="pill-list pill-list_cols" id="pill-list-cols">
           <div class="pill"><span class="icon-circle" aria-hidden="true"><img src="assets/images/note.svg"></span>Нарушение политик безопасности данных</div>
           <div class="pill"><span class="icon-circle" aria-hidden="true"><img src="assets/images/note.svg"></span>Нарушение политик безопасности данных</div>
           <div class="pill"><span class="icon-circle" aria-hidden="true"><img src="assets/images/note.svg"></span>Нарушение политик безопасности данных</div>

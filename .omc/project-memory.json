@@ -85,6 +85,37 @@
       ]
     }
   },
-  "hotPaths": [],
+  "hotPaths": [
+    {
+      "path": "css/article.css",
+      "accessCount": 10,
+      "lastAccessed": 1783410660746,
+      "type": "file"
+    },
+    {
+      "path": "img.png",
+      "accessCount": 1,
+      "lastAccessed": 1783408073864,
+      "type": "file"
+    },
+    {
+      "path": "article.html",
+      "accessCount": 1,
+      "lastAccessed": 1783408080800,
+      "type": "file"
+    },
+    {
+      "path": "js/gallery.js",
+      "accessCount": 1,
+      "lastAccessed": 1783408091150,
+      "type": "file"
+    },
+    {
+      "path": "css/template.css",
+      "accessCount": 1,
+      "lastAccessed": 1783408345766,
+      "type": "file"
+    }
+  ],
   "userDirectives": []
 }
