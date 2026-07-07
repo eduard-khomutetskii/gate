@@ -1,19 +1,30 @@
 {
   "version": "1.0.0",
-  "lastScanned": 1782993543763,
+  "lastScanned": 1783407954746,
   "projectRoot": "/Users/eduard/slider",
   "techStack": {
-    "languages": [],
+    "languages": [
+      {
+        "name": "JavaScript/TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "package.json"
+        ]
+      }
+    ],
     "frameworks": [],
-    "packageManager": null,
+    "packageManager": "npm",
     "runtime": null
   },
   "build": {
     "buildCommand": null,
-    "testCommand": null,
+    "testCommand": "npm test",
     "lintCommand": null,
     "devCommand": null,
-    "scripts": {}
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    }
   },
   "conventions": {
     "namingStyle": null,
@@ -24,42 +35,56 @@
   "structure": {
     "isMonorepo": false,
     "workspaces": [],
-    "mainDirectories": [],
-    "gitBranches": null
+    "mainDirectories": [
+      "assets"
+    ],
+    "gitBranches": {
+      "defaultBranch": "dev",
+      "branchingStrategy": null
+    }
   },
   "customNotes": [],
-  "directoryMap": {},
-  "hotPaths": [
-    {
-      "path": "script.js",
-      "accessCount": 17,
-      "lastAccessed": 1783052692296,
-      "type": "file"
+  "directoryMap": {
+    "assets": {
+      "path": "assets",
+      "purpose": "Static assets",
+      "fileCount": 0,
+      "lastAccessed": 1783407954726,
+      "keyFiles": []
     },
-    {
-      "path": "styles.css",
-      "accessCount": 15,
-      "lastAccessed": 1783052571679,
-      "type": "file"
+    "css": {
+      "path": "css",
+      "purpose": null,
+      "fileCount": 3,
+      "lastAccessed": 1783407954726,
+      "keyFiles": [
+        "article.css",
+        "index.css",
+        "template.css"
+      ]
     },
-    {
-      "path": "index.html",
-      "accessCount": 5,
-      "lastAccessed": 1783052654696,
-      "type": "file"
+    "fonts": {
+      "path": "fonts",
+      "purpose": null,
+      "fileCount": 4,
+      "lastAccessed": 1783407954729,
+      "keyFiles": [
+        "UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7W0Q5n-wU.woff2",
+        "UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2",
+        "UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7W0Q5n-wU.woff2",
+        "cofo-kak-black.otf"
+      ]
     },
-    {
-      "path": "img.png",
-      "accessCount": 3,
-      "lastAccessed": 1782995102759,
-      "type": "file"
-    },
-    {
-      "path": "mobile.png",
-      "accessCount": 1,
-      "lastAccessed": 1782995302141,
-      "type": "file"
+    "js": {
+      "path": "js",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1783407954730,
+      "keyFiles": [
+        "gallery.js"
+      ]
     }
-  ],
+  },
+  "hotPaths": [],
   "userDirectives": []
 }

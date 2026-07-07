@@ -1,142 +1,154 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Удобно для всей команды</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Блог GATE</title>
+  <link rel="stylesheet" href="css/template.css">
+  <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-<main class="page">
-  <h1 class="headline"><span class="accent">Удобно</span> для всей команды</h1>
 
-  <div class="stage">
-    <div class="avatar-badge" aria-hidden="true">P</div>
+  <main class="blog">
 
-    <div class="card-stack" id="cardStack">
-      <article class="card pos-0" data-index="0">
-        <div class="card-content">
-          <div class="card-body">
-            <h2 class="card-title">Руководителю</h2>
-            <div class="card-columns">
-              <div class="card-col">
-                <h3>Сократите до 35% затрат</h3>
-                <ul>
-                  <li>Билеты и отели без скрытых комиссий по ценам от прямых поставщиков</li>
-                  <li>Гибкая тревел-политика, аналитика и согласование в личном кабинете</li>
-                </ul>
-              </div>
-              <div class="card-col">
-                <h3>Автоматизируйте 90% рутины</h3>
-                <p>Освободите ресурсы команды для стратегических задач, сократите расходы и риски ошибок в учёте</p>
-              </div>
-            </div>
-            <div class="card-extra">
-              <div class="card-col">
-                <h3>Платите удобным способом</h3>
-                <p>По счёту или QR-коду, корпоративной картой или с депозита, отсрочка платежа до 30 дней</p>
-              </div>
-            </div>
-          </div>
-          <div class="card-photo" style="--photo-a:#2b2b26;--photo-b:#16171a">Р</div>
-        </div>
-      </article>
+    <section class="blog__heading">
+      <h1 class="blog__title">Блог GATE</h1>
+      <p class="blog__subtitle">Здесь мы рассказываем, как упростить организацию деловых поездок, делимся советами и трендами бизнес-тревел.</p>
+    </section>
 
-      <article class="card pos-1" data-index="1">
-        <div class="card-content">
-          <div class="card-body">
-            <h2 class="card-title">Сотруднику</h2>
-            <div class="card-columns">
-              <div class="card-col">
-                <h3>Командировка за пару кликов</h3>
-                <p>Быстрый поиск и бронирование, выбор удобного способа оплаты, все данные и документы по поездке в одном окне, поддержка 24/7</p>
-              </div>
-              <div class="card-col">
-                <h3>Без лишней волокиты</h3>
-                <p>Авансовый отчёт онлайн, все данные по заказам в личном кабинете, бесплатная справка о перелёте, если потерялся посадочный талон</p>
-              </div>
-            </div>
-            <div class="card-extra">
-              <div class="card-col">
-                <h3>Быстрое согласование</h3>
-                <p>Бронируйте отели и билеты по тревел-политике, сервис проконтролирует лимиты</p>
-              </div>
-              <div class="card-col">
-                <h3>Копите мили</h3>
-                <p>Добавьте ваши карты лояльности и копите бонусы авиакомпаний на личные поездки</p>
-              </div>
-            </div>
-          </div>
-          <div class="card-photo" style="--photo-a:#243328;--photo-b:#12201a">С</div>
-        </div>
-      </article>
-
-      <article class="card pos-2" data-index="2">
-        <div class="card-content">
-          <div class="card-body">
-            <h2 class="card-title">Бухгалтеру</h2>
-            <div class="card-columns">
-              <div class="card-col">
-                <h3>Все документы в одном месте</h3>
-                <ul>
-                  <li>Закрывающие документы формируются автоматически по каждой поездке</li>
-                  <li>Экспорт в 1С и другие учётные системы без ручного ввода</li>
-                </ul>
-              </div>
-              <div class="card-col">
-                <h3>Меньше ошибок в учёте</h3>
-                <p>Сверка расходов по каждому сотруднику и проекту занимает минуты вместо дней</p>
-              </div>
-            </div>
-            <div class="card-extra">
-              <div class="card-col">
-                <h3>Гибкие способы оплаты</h3>
-                <p>Постоплата, депозит или корпоративная карта — выбирайте удобный график расчётов</p>
-              </div>
-            </div>
-          </div>
-          <div class="card-photo" style="--photo-a:#2e2a1f;--photo-b:#1a1712">Б</div>
-        </div>
-      </article>
-
-      <article class="card pos-3" data-index="3">
-        <div class="card-content">
-          <div class="card-body">
-            <h2 class="card-title">Финансовому директору</h2>
-            <div class="card-columns">
-              <div class="card-col">
-                <h3>Полная прозрачность расходов</h3>
-                <ul>
-                  <li>Аналитика трат по отделам, проектам и сотрудникам в реальном времени</li>
-                  <li>Контроль соблюдения тревел-политики на каждом этапе</li>
-                </ul>
-              </div>
-              <div class="card-col">
-                <h3>Экономия бюджета</h3>
-                <p>Прямые цены поставщиков и аналитика помогают сократить travel-бюджет без потери качества</p>
-              </div>
-            </div>
-            <div class="card-extra">
-              <div class="card-col">
-                <h3>Прогнозируемые платежи</h3>
-                <p>Единый счёт по всем поездкам компании с отсрочкой платежа до 30 дней</p>
-              </div>
-            </div>
-          </div>
-          <div class="card-photo" style="--photo-a:#26232f;--photo-b:#15131c">Ф</div>
-        </div>
-      </article>
+    <div class="blog__toolbar">
+      <nav class="blog__filters" aria-label="Категории статей">
+        <button class="tag tag--active" type="button">Все</button>
+        <button class="tag" type="button">Статьи</button>
+        <button class="tag" type="button">Новости</button>
+        <button class="tag" type="button">Аналитика</button>
+        <button class="tag" type="button">Гайды и подборки</button>
+        <button class="tag" type="button">О сервисе</button>
+      </nav>
+      <form class="search" role="search">
+        <input class="search__input" type="search" placeholder="Введите запрос" aria-label="Поиск по статьям">
+        <button class="search__button" type="submit">Поиск</button>
+      </form>
     </div>
 
-    <nav class="dots" id="dots" aria-label="Переключение карточек">
-      <button type="button" class="dot" aria-label="Руководителю" aria-current="true"></button>
-      <button type="button" class="dot" aria-label="Сотруднику" aria-current="false"></button>
-      <button type="button" class="dot" aria-label="Бухгалтеру" aria-current="false"></button>
-      <button type="button" class="dot" aria-label="Финансовому директору" aria-current="false"></button>
-    </nav>
-  </div>
-</main>
+    <section class="blog__grid">
 
-<script src="script.js"></script>
+      <article class="card">
+        <div class="card__pic">
+          <img class="card__img" src="assets/images/pic-3.png" alt="">
+          <span class="card__tag">Комплаенс</span>
+        </div>
+        <div class="card__body">
+          <p class="card__date">01.02.26</p>
+          <h2 class="card__title">Где теряются деньги в деловых поездках 5 точек контроля</h2>
+          <p class="card__excerpt">AI-системы ускоряют процессы, но одновременно создают новые риски: от утечек данных до непрозрачных решений моделей. Комплаенс перестаёт быть формальностью — это операционная необходимость.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card__pic">
+          <img class="card__img" src="assets/images/pic-2.png" alt="">
+          <span class="card__tag">Bleisure</span>
+        </div>
+        <div class="card__body">
+          <p class="card__date">01.02.26</p>
+          <h2 class="card__title">Где теряются деньги</h2>
+          <p class="card__excerpt">AI-системы ускоряют процессы, но одновременно создают новые риски: от утечек данных до непрозрачных решений моделей. Комплаенс перестаёт быть формальностью — это операционная необходимость.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card__pic">
+          <img class="card__img" src="assets/images/pic-2.png" alt="">
+          <span class="card__tag">Финансы и налоги</span>
+        </div>
+        <div class="card__body">
+          <p class="card__date">01.02.26</p>
+          <h2 class="card__title">Где теряются деньги в деловых поездках 5 точек контроля, которые внедряются за 1 день</h2>
+          <p class="card__excerpt">AI-системы ускоряют процессы, но одновременно создают новые риски: от утечек данных до непрозрачных решений моделей. Комплаенс перестаёт быть формальностью — это операционная необходимость.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card__pic">
+          <img class="card__img" src="assets/images/pic-4.png" alt="">
+          <span class="card__tag">Bleisure</span>
+        </div>
+        <div class="card__body">
+          <p class="card__date">01.02.26</p>
+          <h2 class="card__title">Где теряются деньги в деловых поездках 5 точек контроля, которые внедряются за 1 день</h2>
+          <p class="card__excerpt">AI-системы ускоряют процессы, но одновременно создают новые риски: от утечек данных до непрозрачных решений моделей. Комплаенс перестаёт быть формальностью — это операционная необходимость.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card__pic">
+          <img class="card__img" src="assets/images/pic-5.png" alt="">
+          <span class="card__tag">Bleisure</span>
+        </div>
+        <div class="card__body">
+          <p class="card__date">01.02.26</p>
+          <h2 class="card__title">Где теряются деньги в деловых поездках 5 точек контроля, которые внедряются за 1 день</h2>
+          <p class="card__excerpt">AI-системы ускоряют процессы, но одновременно создают новые риски: от утечек данных до непрозрачных решений моделей. Комплаенс перестаёт быть формальностью — это операционная необходимость.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card__pic">
+          <img class="card__img" src="assets/images/pic-2.png" alt="">
+          <span class="card__tag">Комплаенс</span>
+        </div>
+        <div class="card__body">
+          <p class="card__date">01.02.26</p>
+          <h2 class="card__title">Где теряются деньги в деловых поездках 5 точек контроля, которые внедряются за 1 день</h2>
+          <p class="card__excerpt">AI-системы ускоряют процессы, но одновременно создают новые риски: от утечек данных до непрозрачных решений моделей. Комплаенс перестаёт быть формальностью — это операционная необходимость.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card__pic">
+          <img class="card__img" src="assets/images/pic-3.png" alt="">
+          <span class="card__tag">Финансы и налоги</span>
+        </div>
+        <div class="card__body">
+          <p class="card__date">01.02.26</p>
+          <h2 class="card__title">Где теряются деньги в деловых поездках 5 точек контроля, которые внедряются за 1 день</h2>
+          <p class="card__excerpt">AI-системы ускоряют процессы, но одновременно создают новые риски: от утечек данных до непрозрачных решений моделей. Комплаенс перестаёт быть формальностью — это операционная необходимость.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card__pic">
+          <img class="card__img" src="assets/images/pic-6.png" alt="">
+          <span class="card__tag">Аналитика</span>
+        </div>
+        <div class="card__body">
+          <p class="card__date">01.02.26</p>
+          <h2 class="card__title">Где теряются деньги в деловых поездках 5 точек контроля, которые внедряются за 1 день</h2>
+          <p class="card__excerpt">AI-системы ускоряют процессы, но одновременно создают новые риски: от утечек данных до непрозрачных решений моделей. Комплаенс перестаёт быть формальностью — это операционная необходимость.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card__pic">
+          <img class="card__img" src="assets/images/pic-2.png" alt="">
+          <span class="card__tag">Продуктивность</span>
+        </div>
+        <div class="card__body">
+          <p class="card__date">01.02.26</p>
+          <h2 class="card__title">Где теряются деньги в деловых поездках 5 точек контроля, которые внедряются за 1 день</h2>
+          <p class="card__excerpt">AI-системы ускоряют процессы, но одновременно создают новые риски: от утечек данных до непрозрачных решений моделей. Комплаенс перестаёт быть формальностью — это операционная необходимость.</p>
+        </div>
+      </article>
+
+    </section>
+
+    <button class="blog__load-more" type="button">
+      <img class="blog__load-more-icon" src="assets/images/arrow-down.svg" alt="">
+      Подгрузить еще статьи
+    </button>
+
+  </main>
+
 </body>
 </html>
