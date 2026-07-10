@@ -4,6 +4,22 @@
 
 .support {
   margin: 0 auto;
+  position: relative;
+  background: radial-gradient(71.67% 71.67% at 69.1% 50%, #008395 0%, #004650 100%);
+  padding-top: 83px;
+  max-width: 1440px;
+}
+
+.support::before {
+  content: "";
+  position: absolute;
+  background: url(../assets/images/support/support_bg.jpg) no-repeat top right;
+  width: 50%;
+  right: 0;
+  top: 0;
+  height: 100%;
+  background-size: cover;
+  border-bottom-left-radius: 80px;
 }
 
 /* --- Card ----------------------------------------------------------------- */
@@ -12,22 +28,9 @@
   position: relative;
   min-height: 720px;
   overflow: hidden;
-  background: var(--color-dark-teal);
   color: var(--color-white);
-}
-
-/* --- Media (photo + chat overlay) ---------------------------------------- */
-
-.support__media {
-  position: absolute;
-  inset: 0;
-}
-
-.support__photo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: right center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 /* --- Left panel ----------------------------------------------------------- */
@@ -38,11 +41,8 @@
   display: flex;
   flex-direction: column;
   gap: 48px;
-  width: 58%;
   min-height: 720px;
   padding: 48px 130px 56px 56px;
-  background: linear-gradient(150deg, var(--color-dark-teal) 0%, #00616e 60%, #007483 100%);
-  clip-path: polygon(0 0, 100% 0, calc(100% - 110px) 100%, 0 100%);
 }
 
 .support__title {
@@ -53,6 +53,9 @@
   font-size: 40px;
   line-height: 1.15;
   letter-spacing: 0.02em;
+  color: white;
+  position: relative;
+  z-index: 1;
 }
 
 .support__title-accent {
@@ -125,37 +128,47 @@
 
 /* --- Chat overlay --------------------------------------------------------- */
 
+.support__media {
+  padding: 0 0 53px 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
 .support__chat {
-  position: absolute;
-  z-index: 3;
-  left: 55%;
-  right: 4%;
-  bottom: 5%;
   display: flex;
   flex-direction: column;
   gap: 14px;
+  width: 500px;
 }
 
 .support__bubble {
   max-width: 90%;
-  padding: 14px 18px;
-  border-radius: 20px;
+  padding: 16px 40px;
+  border-radius: 56px;
   backdrop-filter: blur(10px);
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.35;
-  color: #123;
+  color: white;
+  -webkit-backdrop-filter: blur(12px); /* Поддержка Safari */
+
+  /* Тонкая светлая граница для имитации ребра стекла */
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  /* Мягкая тень для придания объема и отделения от фона */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
 }
 
 .support__bubble--in {
   align-self: flex-start;
   border-bottom-left-radius: 6px;
-  background: rgba(232, 236, 236, 0.55);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .support__bubble--out {
   align-self: flex-end;
   border-bottom-right-radius: 6px;
-  background: rgba(150, 205, 175, 0.5);
+  background: rgba(150, 205, 175, 0.2);
 }
 
 .support__bubble-text {
@@ -168,6 +181,7 @@
   text-align: right;
   font-size: 12px;
   opacity: 0.6;
+  color: rgba(255, 255, 255, 0.25);
 }
 
 .support__file {
@@ -176,8 +190,8 @@
   gap: 10px;
   margin-top: 10px;
   padding: 8px 14px 8px 10px;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.6);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.2);
   text-decoration: none;
   color: inherit;
 }
@@ -195,92 +209,135 @@
 
 @media (max-width: 1200px) {
   .support__panel {
-    width: 62%;
-    padding-right: 120px;
+    padding: 48px;
   }
 
   .support__title {
     font-size: 34px;
   }
 
-  .support__stat-num {
-    font-size: 48px;
-  }
-
   .support__feature-text {
     font-size: 20px;
   }
+
+
 }
 
-@media (max-width: 860px) {
-  .support__card {
-    display: flex;
-    flex-direction: column;
-    min-height: 0;
+@media (max-width: 1024px) {
+  .support__panel {
+    min-height: auto;
   }
 
-  .support__panel {
-    order: 1;
-    width: 100%;
-    min-height: 0;
-    padding: 40px var(--page-padding-x);
-    gap: 32px;
-    clip-path: none;
+  .support__card {
+    grid-template-columns: 1fr;
+  }
+
+  .support__stats {
+    gap: 16px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .support::before {
+    display: none;
   }
 
   .support__media {
-    position: relative;
-    inset: auto;
-    order: 2;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    padding: 0 var(--page-padding-x) 40px;
-  }
-
-  .support__photo {
-    height: 320px;
-    border-radius: 16px;
-  }
-
-  .support__chat {
-    position: static;
-    inset: auto;
-  }
-
-  .support__bubble {
-    max-width: 88%;
+    background-image: url(../assets/images/support/support_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 98px 140px 98px 40px;
+    justify-content: flex-start;
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 768px) {
+  .support__media {
+    background-size: 1400px;
+    background-position: -500px -65px;
+  }
+}
+
+
+@media (max-width: 690px) {
   .support {
-    padding: 24px var(--page-padding-x) 48px;
+    padding-top: 45px;
   }
 
   .support__title {
-    font-size: 28px;
-  }
-
-  .support__stat-value {
-    font-size: 22px;
+    font-size: 21px;
+    display: flex;
+    flex-direction: column;
   }
 
   .support__stat-num {
-    font-size: 44px;
+    font-size: 50px;
   }
 
-  .support__stat-label,
+  .support__panel {
+    padding: 32px 16px;
+  }
+
+  .support__stat-label {
+    font-size: 16px;
+  }
+
+  .support__stats {
+    flex-direction: column;
+  }
+
+  .support__media {
+    padding: 36px 16px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    position: relative;
+  }
+
+  .support__media::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  .support__chat {
+    width: 100%
+  }
+
+  .support__feature-icon img, .support__feature-icon {
+    width: 40px;
+    height: 40px;
+  }
+
   .support__feature-text {
-    font-size: 18px;
+    font-size: 16px;
   }
 
-  .support__feature-icon {
-    width: 56px;
-    height: 56px;
+  .support__feature {
+    align-items: flex-start;
   }
 
-  .support__photo {
-    height: 220px;
+  .support__bubble-text {
+    font-size: 12px;
+  }
+
+  .support__bubble-time, .support__file-name {
+    font-size: 8px;
+  }
+
+  .support__file {
+    align-items: flex-end;
+    gap: 6px;
+  }
+
+  .support__file-icon {
+    width: 12px;
   }
 }

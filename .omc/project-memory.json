@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastScanned": 1783407954746,
+  "lastScanned": 1783680552106,
   "projectRoot": "/Users/eduard/slider",
   "techStack": {
     "languages": [
@@ -49,14 +49,14 @@
       "path": "assets",
       "purpose": "Static assets",
       "fileCount": 0,
-      "lastAccessed": 1783407954726,
+      "lastAccessed": 1783680552077,
       "keyFiles": []
     },
     "css": {
       "path": "css",
       "purpose": null,
       "fileCount": 3,
-      "lastAccessed": 1783407954726,
+      "lastAccessed": 1783680552079,
       "keyFiles": [
         "article.css",
         "index.css",
@@ -67,7 +67,7 @@
       "path": "fonts",
       "purpose": null,
       "fileCount": 4,
-      "lastAccessed": 1783407954729,
+      "lastAccessed": 1783680552083,
       "keyFiles": [
         "UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7W0Q5n-wU.woff2",
         "UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2",
@@ -78,48 +78,97 @@
     "js": {
       "path": "js",
       "purpose": null,
-      "fileCount": 1,
-      "lastAccessed": 1783407954730,
+      "fileCount": 2,
+      "lastAccessed": 1783680552084,
       "keyFiles": [
-        "gallery.js"
+        "gallery.js",
+        "toc.js"
       ]
     }
   },
   "hotPaths": [
     {
-      "path": "css/article.css",
-      "accessCount": 10,
-      "lastAccessed": 1783410660746,
-      "type": "file"
-    },
-    {
-      "path": "article.html",
-      "accessCount": 3,
-      "lastAccessed": 1783413971380,
-      "type": "file"
-    },
-    {
-      "path": "js/toc.js",
-      "accessCount": 3,
-      "lastAccessed": 1783414102288,
+      "path": "css/support.css",
+      "accessCount": 7,
+      "lastAccessed": 1783682682301,
       "type": "file"
     },
     {
       "path": "css/template.css",
+      "accessCount": 5,
+      "lastAccessed": 1783682410617,
+      "type": "file"
+    },
+    {
+      "path": "10596546.png",
+      "accessCount": 4,
+      "lastAccessed": 1783682406082,
+      "type": "file"
+    },
+    {
+      "path": "css/article.css",
       "accessCount": 3,
-      "lastAccessed": 1783414287124,
+      "lastAccessed": 1783681747328,
       "type": "file"
     },
     {
-      "path": "img.png",
-      "accessCount": 1,
-      "lastAccessed": 1783408073864,
+      "path": "support.html",
+      "accessCount": 3,
+      "lastAccessed": 1783682683193,
       "type": "file"
     },
     {
-      "path": "js/gallery.js",
+      "path": "scratch_shots/desktop.png",
+      "accessCount": 3,
+      "lastAccessed": 1783682707030,
+      "type": "file"
+    },
+    {
+      "path": "scratch_shots/mobile.png",
+      "accessCount": 2,
+      "lastAccessed": 1783682318040,
+      "type": "file"
+    },
+    {
+      "path": "index.html",
       "accessCount": 1,
-      "lastAccessed": 1783408091150,
+      "lastAccessed": 1783680598116,
+      "type": "file"
+    },
+    {
+      "path": "article.html",
+      "accessCount": 1,
+      "lastAccessed": 1783680598623,
+      "type": "file"
+    },
+    {
+      "path": "package.json",
+      "accessCount": 1,
+      "lastAccessed": 1783680599459,
+      "type": "file"
+    },
+    {
+      "path": "css/index.css",
+      "accessCount": 1,
+      "lastAccessed": 1783681331164,
+      "type": "file"
+    },
+    {
+      "path": "assets/images/suppport/support_bg.jpg",
+      "accessCount": 1,
+      "lastAccessed": 1783681350802,
+      "type": "file"
+    },
+    {
+      "path": "assets/images/suppport/support.svg",
+      "accessCount": 1,
+      "lastAccessed": 1783681434625,
+      "type": "file"
+    },
+    {
+      "path": "scratch_shots/mobile500.png",
+      "accessCount": 1,
+      "lastAccessed": 1783682340567,
       "type": "file"
     }
   ],
