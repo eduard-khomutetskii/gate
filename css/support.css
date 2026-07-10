@@ -1,0 +1,286 @@
+/* ==========================================================================
+   Support page (support.html) — «Живая поддержка 24/7»
+   ========================================================================== */
+
+.support {
+  margin: 0 auto;
+}
+
+/* --- Card ----------------------------------------------------------------- */
+
+.support__card {
+  position: relative;
+  min-height: 720px;
+  overflow: hidden;
+  background: var(--color-dark-teal);
+  color: var(--color-white);
+}
+
+/* --- Media (photo + chat overlay) ---------------------------------------- */
+
+.support__media {
+  position: absolute;
+  inset: 0;
+}
+
+.support__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+}
+
+/* --- Left panel ----------------------------------------------------------- */
+
+.support__panel {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  width: 58%;
+  min-height: 720px;
+  padding: 48px 130px 56px 56px;
+  background: linear-gradient(150deg, var(--color-dark-teal) 0%, #00616e 60%, #007483 100%);
+  clip-path: polygon(0 0, 100% 0, calc(100% - 110px) 100%, 0 100%);
+}
+
+.support__title {
+  margin: 0;
+  text-align: center;
+  font-family: var(--font-cofo-kak);
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+}
+
+.support__title-accent {
+  display: block;
+  color: var(--color-lime);
+}
+
+/* --- Stats ---------------------------------------------------------------- */
+
+.support__stats {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.support__stat-value {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.support__stat-num {
+  font-family: var(--font-cofo-kak);
+  font-weight: 900;
+  font-size: 56px;
+  line-height: 1;
+  letter-spacing: 0.01em;
+}
+
+.support__stat-label {
+  margin-top: 6px;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+/* --- Features ------------------------------------------------------------- */
+
+.support__features {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.support__feature {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.support__feature-icon {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+}
+
+.support__feature-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.support__feature-text {
+  font-size: 22px;
+  line-height: 1.3;
+}
+
+/* --- Chat overlay --------------------------------------------------------- */
+
+.support__chat {
+  position: absolute;
+  z-index: 3;
+  left: 55%;
+  right: 4%;
+  bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.support__bubble {
+  max-width: 90%;
+  padding: 14px 18px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  font-size: 16px;
+  line-height: 1.35;
+  color: #123;
+}
+
+.support__bubble--in {
+  align-self: flex-start;
+  border-bottom-left-radius: 6px;
+  background: rgba(232, 236, 236, 0.55);
+}
+
+.support__bubble--out {
+  align-self: flex-end;
+  border-bottom-right-radius: 6px;
+  background: rgba(150, 205, 175, 0.5);
+}
+
+.support__bubble-text {
+  margin: 0;
+}
+
+.support__bubble-time {
+  display: block;
+  margin-top: 4px;
+  text-align: right;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.support__file {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  padding: 8px 14px 8px 10px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  color: inherit;
+}
+
+.support__file-icon {
+  width: 22px;
+  flex-shrink: 0;
+}
+
+.support__file-name {
+  font-size: 14px;
+}
+
+/* --- Responsive ----------------------------------------------------------- */
+
+@media (max-width: 1200px) {
+  .support__panel {
+    width: 62%;
+    padding-right: 120px;
+  }
+
+  .support__title {
+    font-size: 34px;
+  }
+
+  .support__stat-num {
+    font-size: 48px;
+  }
+
+  .support__feature-text {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 860px) {
+  .support__card {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .support__panel {
+    order: 1;
+    width: 100%;
+    min-height: 0;
+    padding: 40px var(--page-padding-x);
+    gap: 32px;
+    clip-path: none;
+  }
+
+  .support__media {
+    position: relative;
+    inset: auto;
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 var(--page-padding-x) 40px;
+  }
+
+  .support__photo {
+    height: 320px;
+    border-radius: 16px;
+  }
+
+  .support__chat {
+    position: static;
+    inset: auto;
+  }
+
+  .support__bubble {
+    max-width: 88%;
+  }
+}
+
+@media (max-width: 560px) {
+  .support {
+    padding: 24px var(--page-padding-x) 48px;
+  }
+
+  .support__title {
+    font-size: 28px;
+  }
+
+  .support__stat-value {
+    font-size: 22px;
+  }
+
+  .support__stat-num {
+    font-size: 44px;
+  }
+
+  .support__stat-label,
+  .support__feature-text {
+    font-size: 18px;
+  }
+
+  .support__feature-icon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .support__photo {
+    height: 220px;
+  }
+}
