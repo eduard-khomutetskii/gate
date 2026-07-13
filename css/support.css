@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .support {
-  margin: 0 auto;
+  margin: 0 auto -1px auto;
   position: relative;
   background: radial-gradient(71.67% 71.67% at 69.1% 50%, #008395 0%, #004650 100%);
   padding-top: 83px;
@@ -14,6 +14,18 @@
   content: "";
   position: absolute;
   background: url(../assets/images/support/support_bg.jpg) no-repeat top right;
+  width: 50%;
+  right: 0;
+  top: 0;
+  height: 100%;
+  background-size: cover;
+  border-bottom-left-radius: 80px;
+}
+
+.support::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.1);
   width: 50%;
   right: 0;
   top: 0;
@@ -161,13 +173,13 @@
 
 .support__bubble--in {
   align-self: flex-start;
-  border-bottom-left-radius: 6px;
+  border-bottom-left-radius: 0 !important;
   background: rgba(255, 255, 255, 0.2);
 }
 
 .support__bubble--out {
   align-self: flex-end;
-  border-bottom-right-radius: 6px;
+  border-bottom-right-radius: 0 !important;
   background: rgba(150, 205, 175, 0.2);
 }
 
@@ -238,7 +250,7 @@
     justify-content: space-between;
   }
 
-  .support::before {
+  .support::before, .support::after {
     display: none;
   }
 
@@ -274,6 +286,11 @@
 
   .support__stat-num {
     font-size: 50px;
+  }
+
+  .support__bubble {
+    padding: 10px 24px;
+    border-radius: 37px;
   }
 
   .support__panel {
