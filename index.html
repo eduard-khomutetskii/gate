@@ -6,13 +6,68 @@
   <title>Блог GATE</title>
   <link rel="stylesheet" href="css/template.css">
   <link rel="stylesheet" href="css/index.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/gsap.min.js" integrity="sha512-Qrpii3NEFZ02RN6ZqpTu6pS/5PEq7EzBYJLki3AKBd8IncrlAwQdZHzExYwS0+b1NM0/qfxI1GOhqWLVosocDA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
+<header class="site-header">
+  <nav class="site-header__nav" aria-label="Главная навигация">
+    <a href="/" class="site-header__logo-link" aria-label="GATE">
+      <img src="/assets/images/logo.svg" alt="GATE" class="site-header__logo">
+    </a>
+
+    <div class="site-header__ctas">
+      <a href="https://go.gate.ru/auth" class="site-header__btn site-header__btn--ghost">Войти</a>
+      <a href="https://go.gate.ru/signup" class="site-header__btn site-header__btn--primary">Подключиться</a>
+    </div>
+
+    <button type="button" class="site-header__burger js-mobile-nav-open" aria-label="Открыть меню" aria-controls="mobile-nav-dialog" aria-expanded="false">
+      <svg class="site-header__burger-icon site-header__burger-icon--open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"></path>
+      </svg>
+      <svg class="site-header__burger-icon site-header__burger-icon--close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path stroke-linecap="round" d="M6 6l12 12M18 6l-12 12"></path>
+      </svg>
+    </button>
+
+    <div class="site-header__mobile-menu" hidden>
+      <a href="https://go.gate.ru/auth" class="site-header__btn site-header__btn--ghost">Войти</a>
+      <a href="https://go.gate.ru/signup" class="site-header__btn site-header__btn--primary">Подключиться</a>
+    </div>
+  </nav>
+</header>
+<div id="mobile-nav-dialog" class="js-mobile-nav fixed invisible inset-0 z-200 lg:hidden" role="dialog" aria-modal="true" aria-hidden="false" aria-label="Мобильное меню" style="opacity: 1;">
+  <button type="button" class="js-mobile-nav-backdrop absolute inset-0 border-0 bg-[#05070e]/65" aria-label="Закрыть меню" tabindex="-1"></button>
+
+  <div class="js-mobile-nav-panel relative z-10 flex w-full flex-col overflow-hidden bg-white px-2.5 pt-4 pb-6 shadow-[0_0_0_1px_rgba(0,0,0,0.06)] sm:px-6" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
+    <div class="js-mobile-nav-stagger flex min-h-0 flex-1 flex-col justify-between gap-4">
+      <div class="js-mobile-nav-stagger-item flex shrink-0 items-center justify-between" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+        <a href="/" class="inline-flex items-center py-1">
+          <img src="/assets/images/logo.svg" alt="GATE" class="h-8 w-auto" width="81" height="32">
+        </a>
+        <button type="button" class="js-mobile-nav-close inline-flex size-6 items-center justify-center rounded-full bg-[#004650] text-white transition hover:bg-[#003540]" aria-label="Закрыть меню">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="size-5" aria-hidden="true">
+            <path stroke-linecap="round" d="M8 8l8 8m0-8L8 16"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="js-mobile-nav-stagger-item flex shrink-0 gap-2 pt-2" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+        <a href="https://go.gate.ru/auth" class="flex h-10 min-h-10 flex-1 cursor-pointer items-center justify-center rounded-[36px] border border-[#ff467c] bg-transparent text-sm leading-[1.4] text-[#ff467c] transition hover:bg-[#ff467c]/10">
+          Войти
+        </a>
+      </div>
+      <div class="js-mobile-nav-stagger-item flex shrink-0 gap-2 pt-2" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+        <a href="https://go.gate.ru/auth" class="flex h-10 min-h-10 flex-1 cursor-pointer items-center justify-center rounded-[36px] site-header__btn--primary bg-transparent text-sm leading-[1.4] text-[#ff467c] transition hover:bg-[#ff467c]/10">
+          Подключиться
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
 
   <main class="blog">
 
     <section class="blog__heading">
-      <h1 class="blog__title">Блог GATE</h1>
+      <h1 class="blog__title font-cofo">Блог GATE</h1>
       <p class="blog__subtitle">Здесь мы рассказываем, как упростить организацию деловых поездок, делимся советами и трендами бизнес-тревел.</p>
     </section>
 
@@ -150,5 +205,6 @@
 
   </main>
 
+  <script src="js/template.js"></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastScanned": 1783407954746,
+  "lastScanned": 1783935455108,
   "projectRoot": "/Users/eduard/slider",
   "techStack": {
     "languages": [
@@ -49,14 +49,14 @@
       "path": "assets",
       "purpose": "Static assets",
       "fileCount": 0,
-      "lastAccessed": 1783407954726,
+      "lastAccessed": 1783935455084,
       "keyFiles": []
     },
     "css": {
       "path": "css",
       "purpose": null,
       "fileCount": 3,
-      "lastAccessed": 1783407954726,
+      "lastAccessed": 1783935455089,
       "keyFiles": [
         "article.css",
         "index.css",
@@ -67,7 +67,7 @@
       "path": "fonts",
       "purpose": null,
       "fileCount": 4,
-      "lastAccessed": 1783407954729,
+      "lastAccessed": 1783935455093,
       "keyFiles": [
         "UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7W0Q5n-wU.woff2",
         "UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2",
@@ -78,10 +78,11 @@
     "js": {
       "path": "js",
       "purpose": null,
-      "fileCount": 1,
-      "lastAccessed": 1783407954730,
+      "fileCount": 2,
+      "lastAccessed": 1783935455094,
       "keyFiles": [
-        "gallery.js"
+        "gallery.js",
+        "toc.js"
       ]
     }
   },
@@ -90,6 +91,24 @@
       "path": "css/article.css",
       "accessCount": 10,
       "lastAccessed": 1783410660746,
+      "type": "file"
+    },
+    {
+      "path": "index.html",
+      "accessCount": 6,
+      "lastAccessed": 1783939332874,
+      "type": "file"
+    },
+    {
+      "path": "css/index.css",
+      "accessCount": 5,
+      "lastAccessed": 1783939320876,
+      "type": "file"
+    },
+    {
+      "path": "css/template.css",
+      "accessCount": 4,
+      "lastAccessed": 1783935633817,
       "type": "file"
     },
     {
@@ -105,9 +124,9 @@
       "type": "file"
     },
     {
-      "path": "css/template.css",
-      "accessCount": 3,
-      "lastAccessed": 1783414287124,
+      "path": "js/gallery.js",
+      "accessCount": 2,
+      "lastAccessed": 1783938448656,
       "type": "file"
     },
     {
@@ -117,9 +136,15 @@
       "type": "file"
     },
     {
-      "path": "js/gallery.js",
+      "path": "assets/images/logo.svg",
       "accessCount": 1,
-      "lastAccessed": 1783408091150,
+      "lastAccessed": 1783935586403,
+      "type": "file"
+    },
+    {
+      "path": "js/header.js",
+      "accessCount": 1,
+      "lastAccessed": 1783939288298,
       "type": "file"
     }
   ],
