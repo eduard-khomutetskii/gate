@@ -151,7 +151,7 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
-  width: 500px;
+  width: 532px;
 }
 
 .support__bubble {
@@ -306,10 +306,17 @@
   }
 
   .support__media {
-    padding: 36px 16px;
+    padding: 23px 16px;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     position: relative;
+    height: 329px;
+    background-size: 700px;
+    background-position: right;
+  }
+
+  .support__media:before {
+    display: none;
   }
 
   .support__media::before {
@@ -325,7 +332,8 @@
   }
 
   .support__chat {
-    width: 100%
+    width: 100%;
+    gap: 8px;
   }
 
   .support__feature-icon img, .support__feature-icon {
@@ -356,5 +364,9 @@
 
   .support__file-icon {
     width: 12px;
+  }
+
+  .support__bubble:nth-child(3), .support__bubble:nth-child(4) {
+    display: none;
   }
 }
