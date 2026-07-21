@@ -1,0 +1,24 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 152.713 128.002" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Heart">
+<path id="Vector" d="M76.3564 128.002L24.7203 76.3657L75.2592 25.8268C89.5075 11.5784 112.647 11.5784 126.895 25.8268C141.144 40.0751 141.144 63.2146 126.895 77.4629L76.3564 128.002Z" fill="url(#paint0_linear_0_8)"/>
+<foreignObject x="-7.64346" y="-7.64346" width="158.412" height="158.412"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(11.39px);clip-path:url(#bgblur_0_0_8_clip_path);height:100%;width:100%"></div></foreignObject><path id="Vector_2" data-figma-bg-blur-radius="22.7753" d="M26.087 26.0864C40.1871 11.9866 63.0858 11.9871 77.1858 26.0871L127.456 76.3573L76.3572 127.456L26.087 77.1859C11.9869 63.0858 11.9869 40.1865 26.087 26.0864Z" fill="var(--fill-0, #FFB4CD)" fill-opacity="0.3" stroke="url(#paint1_linear_0_8)" stroke-width="0.759176"/>
+<path id="Vector_3" d="M26.5255 26.5249C40.3833 12.6674 62.8896 12.6679 76.7473 26.5256L126.579 76.3573L76.3572 126.579L26.5255 76.7474C12.6676 62.8896 12.6676 40.3827 26.5255 26.5249Z" stroke="url(#paint2_linear_0_8)" stroke-width="2"/>
+</g>
+<defs>
+<clipPath id="bgblur_0_0_8_clip_path" transform="translate(7.64346 7.64346)"><path d="M26.087 26.0864C40.1871 11.9866 63.0858 11.9871 77.1858 26.0871L127.456 76.3573L76.3572 127.456L26.087 77.1859C11.9869 63.0858 11.9869 40.1865 26.087 26.0864Z"/>
+</clipPath><linearGradient id="paint0_linear_0_8" x1="50.5383" y1="102.184" x2="126.895" y2="25.8268" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FF71A0"/>
+<stop offset="1" stop-color="#FF4682"/>
+</linearGradient>
+<linearGradient id="paint1_linear_0_8" x1="4.704" y1="41.4781" x2="83.0195" y2="7.50012" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" stop-opacity="0.1"/>
+<stop offset="0.473958" stop-color="#FFB7CF"/>
+<stop offset="1" stop-color="white" stop-opacity="0.5"/>
+</linearGradient>
+<linearGradient id="paint2_linear_0_8" x1="4.704" y1="41.4781" x2="83.0195" y2="7.50012" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" stop-opacity="0.1"/>
+<stop offset="0.473958" stop-color="#FFB7CF"/>
+<stop offset="1" stop-color="white" stop-opacity="0.5"/>
+</linearGradient>
+</defs>
+</svg>

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>О компании — GATE</title>
+  <link rel="stylesheet" href="css/template.css">
+  <link rel="stylesheet" href="css/about.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/gsap.min.js" integrity="sha512-Qrpii3NEFZ02RN6ZqpTu6pS/5PEq7EzBYJLki3AKBd8IncrlAwQdZHzExYwS0+b1NM0/qfxI1GOhqWLVosocDA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+
+<section class="about">
+  <!-- Hero -->
+  <section class="about-hero">
+    <div class="about-hero__bg">
+      <img class="about-hero__bg-img" src="assets/images/about/hero-bg.jpg" alt="">
+      <div class="about-hero__bg-overlay"></div>
+    </div>
+
+    <header class="site-header about-hero__header">
+      <nav class="site-header__nav" aria-label="Главная навигация">
+        <a href="/" class="site-header__logo-link" aria-label="GATE">
+          <img src="assets/images/about/logo-light.svg" alt="GATE" class="site-header__logo">
+        </a>
+
+        <div class="site-header__ctas">
+          <a href="https://go.gate.ru/demo" class="site-header__btn site-header__btn--ghost">Заказать демонстрацию</a>
+          <a href="https://go.gate.ru/signup" class="site-header__btn site-header__btn--primary">Подключиться бесплатно</a>
+        </div>
+
+        <button type="button" class="site-header__burger js-mobile-nav-open" aria-label="Открыть меню" aria-controls="mobile-nav-dialog" aria-expanded="false">
+          <svg class="site-header__burger-icon site-header__burger-icon--open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"></path>
+          </svg>
+          <svg class="site-header__burger-icon site-header__burger-icon--close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path stroke-linecap="round" d="M6 6l12 12M18 6l-12 12"></path>
+          </svg>
+        </button>
+
+        <div class="site-header__mobile-menu" hidden>
+          <a href="https://go.gate.ru/demo" class="site-header__btn site-header__btn--ghost">Заказать демонстрацию</a>
+          <a href="https://go.gate.ru/signup" class="site-header__btn site-header__btn--primary">Подключиться бесплатно</a>
+        </div>
+      </nav>
+    </header>
+    <div id="mobile-nav-dialog" class="js-mobile-nav fixed invisible inset-0 z-200 lg:hidden" role="dialog" aria-modal="true" aria-hidden="false" aria-label="Мобильное меню">
+      <button type="button" class="js-mobile-nav-backdrop absolute inset-0 border-0 bg-[#05070e]/65" aria-label="Закрыть меню" tabindex="-1"></button>
+
+      <div class="js-mobile-nav-panel relative z-10 flex w-full flex-col overflow-hidden bg-white px-2.5 pt-4 pb-6 shadow-[0_0_0_1px_rgba(0,0,0,0.06)] sm:px-6">
+        <div class="js-mobile-nav-stagger flex min-h-0 flex-1 flex-col justify-between gap-4">
+          <div class="js-mobile-nav-stagger-item flex shrink-0 items-center justify-between">
+            <a href="/" class="inline-flex items-center py-1">
+              <img src="assets/images/logo.svg" alt="GATE" class="h-8 w-auto" width="81" height="32">
+            </a>
+            <button type="button" class="js-mobile-nav-close inline-flex size-6 items-center justify-center rounded-full bg-[#004650] text-white transition hover:bg-[#003540]" aria-label="Закрыть меню">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="size-5" aria-hidden="true">
+                <path stroke-linecap="round" d="M8 8l8 8m0-8L8 16"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="js-mobile-nav-stagger-item flex shrink-0 gap-2 pt-2">
+            <a href="https://go.gate.ru/demo" class="flex h-10 min-h-10 flex-1 cursor-pointer items-center justify-center rounded-[36px] border border-[#ff467c] bg-transparent text-sm leading-[1.4] text-[#ff467c] transition hover:bg-[#ff467c]/10">
+              Заказать демонстрацию
+            </a>
+          </div>
+          <div class="js-mobile-nav-stagger-item flex shrink-0 gap-2 pt-2">
+            <a href="https://go.gate.ru/signup" class="flex h-10 min-h-10 flex-1 cursor-pointer items-center justify-center rounded-[36px] site-header__btn--primary bg-transparent text-sm leading-[1.4] text-[#ff467c] transition hover:bg-[#ff467c]/10">
+              Подключиться бесплатно
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-hero__content">
+      <h1 class="about-hero__title">Онлайн-сервис <br>для командировок</h1>
+      <p class="about-hero__subtitle">Всё для управления деловыми поездками <br>в одном личном кабинете</p>
+
+      <div class="about-hero__badges">
+        <div class="about-hero__badge">
+          <img class="about-hero__badge-logo" src="assets/images/about/partner-aeroclub.png" alt="Аэроклуб">
+          <p class="about-hero__badge-text">Разработано «Аэроклубом»</p>
+        </div>
+        <div class="about-hero__badge">
+          <img class="about-hero__badge-logo" src="assets/images/about/partner-akplus.png" alt="АК Плюс">
+          <p class="about-hero__badge-text">Входим в Группу «АК Плюс»</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Экспертиза -->
+  <section class="about-section about-expertise">
+    <h2 class="about-section__title">Экспертиза лидера делового <br>туризма в новом формате</h2>
+
+    <div class="about-expertise__row">
+      <div class="about-expertise__text">
+        <p>GATE создан компанией «Аэроклуб» и входит в «АК Плюс» — российскую международную TravelTech-группу, которая развивает цифровые решения для организации бизнес-поездок.</p>
+        <p>«Аэроклуб» — флагман российского рынка делового туризма.</p>
+        <p>За 30+ лет команда «Аэроклуба» накопила уникальную экспертизу, которой доверяют крупнейшие российские компании.</p>
+      </div>
+      <div class="about-expertise__card">
+        <img src="/assets/images/about/expert-logo.png" />
+        <p>GATE — это технологии и инфраструктура «Аэроклуба» в современном онлайн-решении, доступном компаниям любого масштаба. Без сложных внедрений, длительной настройки и высоких затрат на сопровождение.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Наша миссия -->
+  <section class="about-section about-mission">
+    <h2 class="about-section__title">Наша миссия</h2>
+
+    <div class="about-mission__card">
+      <p class="about-mission__title">С деловыми поездками — на «ты»</p>
+      <p class="about-mission__text">Мы делаем организацию командировок простой, прозрачной и управляемой.</p>
+      <p class="about-mission__text">Помогаем компаниям автоматизировать <span class="about-mission__accent">до 90% рутинных процессов</span>, сократить расходы и освободить сотрудников от операционных задач.</p>
+    </div>
+  </section>
+
+  <!-- Наши ценности -->
+  <section class="about-section about-values">
+    <h2 class="about-section__title">Наши ценности</h2>
+
+    <div class="about-values__grid">
+      <div class="about-values__card about-values__card--simplicity">
+        <img class="about-values__icon" src="assets/images/about/icon-value-like.svg" alt="">
+        <p class="about-values__name">Простота использования</p>
+        <p class="about-values__desc">Мы создаем решения, которыми удобно пользоваться с первого дня — без сложного обучения, внедрения и абонентской платы</p>
+      </div>
+
+      <div class="about-values__card about-values__card--efficiency">
+        <p class="about-values__name">Эффективность</p>
+        <p class="about-values__desc">Помогаем компаниям контролировать расходы и принимать решения на основе точных данных</p>
+      </div>
+
+      <div class="about-values__card about-values__card--care">
+        <img class="about-values__icon about-values__icon--heart" src="assets/images/about/icon-value-heart.svg" alt="">
+        <p class="about-values__name">Забота о клиенте</p>
+        <p class="about-values__desc">Эксперты поддержки помогают на всех этапах поездки — 24/7</p>
+      </div>
+
+      <div class="about-values__card about-values__card--tech">
+        <img class="about-values__icon about-values__icon--tech" src="assets/images/about/icon-value-tech.png" alt="">
+        <p class="about-values__name">Технологичность</p>
+        <p class="about-values__desc">Используем цифровые инструменты и автоматизацию, чтобы повышать эффективность процессов</p>
+      </div>
+
+      <div class="about-values__card about-values__card--reliability">
+        <img class="about-values__icon about-values__icon--reliability" src="assets/images/about/icon-value-reliability.svg" alt="">
+        <p class="about-values__name">Надежность</p>
+        <p class="about-values__desc">30-летний опыт «<a href="https://aeroclub.ru/" target="_blank" rel="noopener">Аэроклуба</a>», проверенные поставщики и высокий стандарт сервиса</p>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- Логотипы партнёров -->
+<div class="about-partners">
+  <div class="about-partners__track">
+    <img src="assets/images/about/partner-sibur.svg" alt="СИБУР">
+    <img src="assets/images/about/partner-vkusvill.svg" alt="ВкусВилл">
+    <img src="assets/images/about/partner-aliexpress.svg" alt="AliExpress">
+    <img src="assets/images/about/partner-transas.svg" alt="Транзас">
+    <img src="assets/images/about/partner-uralchem.svg" alt="Уралхим">
+    <img src="assets/images/about/partner-weatherford.svg" alt="Weatherford">
+    <img src="assets/images/about/partner-servier-icon.svg" alt="">
+    <img src="assets/images/about/partner-servier-text.svg" alt="Servier">
+    <img src="assets/images/about/partner-isoroc.svg" alt="ISOROC">
+    <img src="assets/images/about/partner-perspektiva.svg" alt="Перспектива">
+    <img src="assets/images/about/partner-logo11.svg" alt="">
+  </div>
+</div>
+
+<section class="about">
+  <!-- Масштаб -->
+  <section class="about-section about-scale">
+    <h2 class="about-section__title about-section__title--center">Масштаб, который работает <br>на ваш бизнес</h2>
+
+    <div class="about-scale__grid">
+      <div class="about-scale__stat">
+        <p class="about-scale__num">3 000+</p>
+        <p class="about-scale__label">клиентов доверяют сервису</p>
+      </div>
+      <div class="about-scale__stat">
+        <p class="about-scale__num about-scale__num--accent">30+ лет</p>
+        <p class="about-scale__label">Экспертизы в TravelTech</p>
+      </div>
+      <div class="about-scale__stat">
+        <p class="about-scale__num">98,5%</p>
+        <p class="about-scale__label">Довольных клиентов</p>
+      </div>
+      <div class="about-scale__stat">
+        <p class="about-scale__num about-scale__num--accent">3+ млн</p>
+        <p class="about-scale__label">отелей и квартир по всему миру</p>
+      </div>
+      <div class="about-scale__stat">
+        <p class="about-scale__num">800+</p>
+        <p class="about-scale__label">российских и международных авиакомпаний</p>
+      </div>
+      <div class="about-scale__stat">
+        <p class="about-scale__num about-scale__num--accent">250 000+</p>
+        <p class="about-scale__label">бронирований в месяц</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Логотипы партнёров -->
+  <div class="about-partners">
+    <div class="about-partners__track">
+      <img src="assets/images/about/partner-sibur.svg" alt="СИБУР">
+      <img src="assets/images/about/partner-vkusvill.svg" alt="ВкусВилл">
+      <img src="assets/images/about/partner-aliexpress.svg" alt="AliExpress">
+      <img src="assets/images/about/partner-transas.svg" alt="Транзас">
+      <img src="assets/images/about/partner-uralchem.svg" alt="Уралхим">
+    </div>
+  </div>
+
+  <!-- Цитата 1 -->
+  <section class="about-section about-quote">
+    <div class="about-quote__card">
+      <p class="about-quote__text">«Технологичность для нас — это способ транслировать 30-летний опыт в конкретные преимущества для клиента: сервис 24/7, экспертную поддержку, безопасность сотрудников в поездках и бесперебойность всех операций. Создавая GATE, мы отвечали на запрос рынка, открывая инфраструктуру „Аэроклуба“ любому бизнесу.</p>
+      <p class="about-quote__text">Для клиента это значит работать на лучших условиях от лидера рынка, получив проверенное ИТ-решение и готовую сервисную модель, где использование алгоритмов автоматизирует процессы, экономя тревел-бюджет и время сотрудников. С GATE вы подключаетесь к экспертизе, ставшей отраслевым стандартом, и сразу фокусируетесь на задачах своего бизнеса».</p>
+      <p class="about-quote__name">Денис Матюхин</p>
+      <p class="about-quote__role">Председатель Совета директоров ГК Аэроклуб</p>
+    </div>
+    <div class="about-quote__photo">
+      <img src="assets/images/about/quote-matyukhin.jpg" alt="Денис Матюхин">
+    </div>
+  </section>
+
+  <!-- Наша команда -->
+  <section class="about-section about-team">
+    <h2 class="about-section__title about-section__title--center">Наша команда</h2>
+    <p class="about-team__subtitle">Эксперты, которые создают сервис каждый день</p>
+
+    <div class="about-team__grid">
+      <div class="about-team__card">
+        <img class="about-team__photo" src="assets/images/about/team-nikolaev.jpg" alt="Константин Николаев">
+        <p class="about-team__name">Константин Николаев</p>
+        <p class="about-team__role">Генеральный директор</p>
+      </div>
+      <div class="about-team__card">
+        <img class="about-team__photo" src="assets/images/about/team-gaiduchenko.jpg" alt="Никифор Гайдученко">
+        <p class="about-team__name">Никифор Гайдученко</p>
+        <p class="about-team__role">Управляющий директор</p>
+      </div>
+      <div class="about-team__card">
+        <img class="about-team__photo" src="assets/images/about/team-arshakyan.jpg" alt="Дмитрий Аршакян">
+        <p class="about-team__name">Дмитрий Аршакян</p>
+        <p class="about-team__role">Директор по продукту</p>
+      </div>
+      <div class="about-team__card">
+        <img class="about-team__photo" src="assets/images/about/team-kovalenko.png" alt="Виктория Коваленко">
+        <p class="about-team__name">Виктория Коваленко</p>
+        <p class="about-team__role">Руководитель департамента по работе с ключевыми клиентами</p>
+      </div>
+      <div class="about-team__card">
+        <img class="about-team__photo" src="assets/images/about/team-polyanskaya.jpg" alt="Екатерина Полянская">
+        <p class="about-team__name">Екатерина Полянская</p>
+        <p class="about-team__role">Коммерческий директор</p>
+      </div>
+      <div class="about-team__card">
+        <img class="about-team__photo" src="assets/images/about/team-karimova.jpg" alt="Анастасия Каримова">
+        <p class="about-team__name">Анастасия Каримова</p>
+        <p class="about-team__role">Директор юридического департамента</p>
+      </div>
+      <div class="about-team__card">
+        <img class="about-team__photo" src="assets/images/about/team-kovalenko.png" alt="Юлия Скалацкая">
+        <p class="about-team__name">Юлия Скалацкая</p>
+        <p class="about-team__role">Руководитель департамента клиентского сервиса</p>
+      </div>
+      <div class="about-team__card">
+        <img class="about-team__photo" src="assets/images/about/team-kovalenko.png" alt="Ольга Юдина">
+        <p class="about-team__name">Ольга Юдина</p>
+        <p class="about-team__role">Руководитель подразделения бизнес-анализа</p>
+      </div>
+      <div class="about-team__card">
+        <img class="about-team__photo" src="assets/images/about/team-orlov.jpg" alt="Егор Орлов">
+        <p class="about-team__name">Егор Орлов</p>
+        <p class="about-team__role">Технический директор</p>
+      </div>
+      <div class="about-team__card">
+        <img class="about-team__photo" src="assets/images/about/team-shadrina.jpg" alt="Юлия Шадрина">
+        <p class="about-team__name">Юлия Шадрина</p>
+        <p class="about-team__role">PR директор</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Цитата 2 -->
+  <section class="about-section about-quote about-quote--reverse">
+    <div class="about-quote__photo">
+      <img src="assets/images/about/quote-gaiduchenko.jpg" alt="Никифор Гайдученко">
+    </div>
+    <div class="about-quote__card">
+      <p class="about-quote__text">«Философия GATE — только прагматичные решения, которые экономят время компании. Мы создали технологичный сервис, но за его алгоритмами стоят реальные люди, которые понимают цену ошибки в деловой поездке. И я уверен, что наши клиенты чувствуют эту поддержку и заботу.</p>
+      <p class="about-quote__text">Классический тревел-менеджмент зачастую сложный и запутанный. Мы это меняем. Мы хотим, чтобы инструменты для управления командировками стали такими же интуитивными и привычными, как обычные приложения в вашем смартфоне».</p>
+      <p class="about-quote__name">Никифор Гайдученко</p>
+      <p class="about-quote__role">Управляющий директор Gate</p>
+    </div>
+  </section>
+
+  <!-- CTA: Бесплатный аудит -->
+  <section class="about-cta">
+    <h2 class="about-cta__title"><span class="about-cta__title-accent">Бесплатный</span> аудит</h2>
+    <p class="about-cta__subtitle">За 10 минут расскажем, как сократить расходы <br>и автоматизировать рутинные процессы</p>
+
+    <form class="about-cta__form">
+      <div class="about-cta__fields">
+        <div class="about-cta__field about-cta__field--floating">
+          <label class="about-cta__field-label" for="cta-phone">Телефон*</label>
+          <input class="about-cta__field-input" id="cta-phone" name="phone" type="tel" placeholder="+7 (___)___-__-__" required>
+        </div>
+        <div class="about-cta__field">
+          <input class="about-cta__field-input" name="name" type="text" placeholder="Имя">
+        </div>
+        <div class="about-cta__field">
+          <input class="about-cta__field-input" name="company" type="text" placeholder="ИНН или название компании">
+        </div>
+        <div class="about-cta__field">
+          <input class="about-cta__field-input" name="email" type="email" placeholder="Электронная почта">
+        </div>
+      </div>
+
+      <div class="about-cta__trips">
+        <span class="about-cta__trips-label">Командировок в месяц</span>
+        <div class="about-cta__trips-options" role="radiogroup" aria-label="Командировок в месяц">
+          <label class="about-cta__trips-option">
+            <input type="radio" name="trips" value="unknown" checked>
+            <span>Не знаю</span>
+          </label>
+          <label class="about-cta__trips-option">
+            <input type="radio" name="trips" value="to10">
+            <span>до 10</span>
+          </label>
+          <label class="about-cta__trips-option">
+            <input type="radio" name="trips" value="10-20">
+            <span>10-20</span>
+          </label>
+          <label class="about-cta__trips-option">
+            <input type="radio" name="trips" value="20+">
+            <span>Более 20</span>
+          </label>
+        </div>
+      </div>
+
+      <button class="about-cta__submit" type="submit">Получить консультацию</button>
+
+      <label class="about-cta__consent">
+        <input type="checkbox" required>
+        <span>Заполняя форму, даю <a href="https://go.gate.ru/soglasieobrabotka" target="_blank" rel="noopener">согласие</a> на обработку персональных данных, принимаю <a href="https://go.gate.ru/confidence" target="_blank" rel="noopener">политику конфиденциальности</a> и <a href="https://go.gate.ru/offer" target="_blank" rel="noopener">условия оферты</a></span>
+      </label>
+    </form>
+  </section>
+
+  <!-- FAQ -->
+  <section class="about-faq">
+    <h2 class="about-faq__title">Частые вопросы по организации командировок</h2>
+
+    <div class="about-faq__list">
+      <div class="about-faq__item js-faq-item">
+        <button class="about-faq__question js-faq-trigger" type="button" aria-expanded="false">
+          <span>Сколько стоит доступ к сервису?</span>
+          <img class="about-faq__icon" src="assets/images/about/icon-faq-arrow.svg" alt="">
+        </button>
+        <div class="about-faq__answer">
+          <p>Чтобы получить доступ к сервису, достаточно просто зарегистрироваться. Абонентской платы за пользование сервисом нет. Вы оплачиваете только оформленные заказы.</p>
+          <p>Цены на авиа- и ж/д билеты, а также отели в сервисе такие же, как у прямых поставщиков.</p>
+        </div>
+      </div>
+
+      <div class="about-faq__item js-faq-item">
+        <button class="about-faq__question js-faq-trigger" type="button" aria-expanded="false">
+          <span>Нужно ли платить за сервис, если командировок в ближайший месяц не будет?</span>
+          <img class="about-faq__icon" src="assets/images/about/icon-faq-arrow.svg" alt="">
+        </button>
+        <div class="about-faq__answer">
+          <p>В сервисе нет ежемесячной абонентской платы. Вы оплачиваете только сервисный сбор за оформление билетов при оформлении конкретных заказов. Если командировок нет, платить не нужно.</p>
+        </div>
+      </div>
+
+      <div class="about-faq__item js-faq-item">
+        <button class="about-faq__question js-faq-trigger" type="button" aria-expanded="false">
+          <span>Как именно вы помогаете сокращать расходы?</span>
+          <img class="about-faq__icon" src="assets/images/about/icon-faq-arrow.svg" alt="">
+        </button>
+        <div class="about-faq__answer">
+          <p>Сервис автоматизирует настройку и контроль соблюдения лимитов в рамках тревел-политики, что ограничивает сотрудников в тратах и гарантирует прозрачное управление командировочным бюджетом.</p>
+          <p>GATE имеет прямые договоры с поставщиками, что дает доступ к бронированию отелей, квартир и билетов для деловых поездок по выгодным корпоративным тарифам и без скрытых комиссии.</p>
+          <p>Онлайн аналитика обеспечивает оперативный контроль расходов и позволяет более точно прогнозировать затраты на будущие периоды.</p>
+          <p>Сервис Гейт автоматизирует 90% рутинных операций, что позволяет сократить операционные затраты и снизить расходы на организацию поездок.</p>
+        </div>
+      </div>
+
+      <div class="about-faq__item js-faq-item">
+        <button class="about-faq__question js-faq-trigger" type="button" aria-expanded="false">
+          <span>Какие способы оплаты доступны в сервисе?</span>
+          <img class="about-faq__icon" src="assets/images/about/icon-faq-arrow.svg" alt="">
+        </button>
+        <div class="about-faq__answer">
+          <p>Оплачивать услуги можно любым удобным способом. Оплата возможна:</p>
+          <ul>
+            <li>с депозита юридического лица;</li>
+            <li>по счету с отсрочкой до 30 дней;</li>
+            <li>по QR-коду;</li>
+            <li>корпоративной картой.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="about-faq__item js-faq-item">
+        <button class="about-faq__question js-faq-trigger" type="button" aria-expanded="false">
+          <span>Для каких отраслей бизнеса подходит сервис?</span>
+          <img class="about-faq__icon" src="assets/images/about/icon-faq-arrow.svg" alt="">
+        </button>
+        <div class="about-faq__answer">
+          <p>Сервис подходит для компаний любого масштаба — от растущего бизнеса до крупных организаций с большим количеством деловых поездок.</p>
+          <p>GATE используют уже 3000+ компании из разных сфер: производства, девелопмента и строительства, ИТ, консалтинга, энергетики, нефтедобычи, телекоммуникаций, фармацевтики, спорта и мероприятий.</p>
+        </div>
+      </div>
+
+      <div class="about-faq__item js-faq-item">
+        <button class="about-faq__question js-faq-trigger" type="button" aria-expanded="false">
+          <span>Подходит ли сервис для организации зарубежных командировок?</span>
+          <img class="about-faq__icon" src="assets/images/about/icon-faq-arrow.svg" alt="">
+        </button>
+        <div class="about-faq__answer">
+          <p>Да. В сервисе 3+ млн отелей, апартаментов и квартир по всему миру, большой выбор рейсов иностранных авиакомпаний. Оплачивать заказы можно с российской карты или счета.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer class="site-footer">
+    <div class="site-footer__heading">
+      <h2 class="site-footer__title">Организуйте деловые <br>поездки эффективнее</h2>
+      <p class="site-footer__subtitle">Получите доступ к технологиям и экспертизе лидера бизнес-тревел</p>
+    </div>
+
+    <div class="site-footer__links">
+      <nav class="site-footer__col" aria-label="Навигация">
+        <a href="index.html">Главная</a>
+        <a href="about.html">О Компании</a>
+      </nav>
+      <nav class="site-footer__col" aria-label="Документы">
+        <a href="https://go.gate.ru/confidence" target="_blank" rel="noopener">Политика конфиденциальности</a>
+        <a href="https://go.gate.ru/offer" target="_blank" rel="noopener">Оферта</a>
+        <a href="https://go.gate.ru/knowledge" target="_blank" rel="noopener">База знаний</a>
+      </nav>
+      <div class="site-footer__col">
+        <a href="tel:+79014682344">+7 901 468 23 44</a>
+        <a href="mailto:partners@gate.ru">partners@gate.ru</a>
+        <span>121614, ул. Крылатская, д. 17, к. 2, 1 эт</span>
+      </div>
+
+      <div class="site-footer__ctas">
+        <a href="https://go.gate.ru/auth" class="site-header__btn site-header__btn--ghost">Войти</a>
+        <a href="https://go.gate.ru/signup" class="site-header__btn site-header__btn--primary">Подключиться</a>
+      </div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <a href="/" class="site-footer__logo-link" aria-label="GATE">
+        <img src="assets/images/about/logo-light.svg" alt="GATE" class="site-footer__logo">
+      </a>
+      <div class="site-footer__social">
+        <a href="https://vk.com/" target="_blank" rel="noopener" aria-label="ВКонтакте">
+          <img src="assets/images/about/icon-vk.svg" alt="">
+        </a>
+        <a href="https://t.me/" target="_blank" rel="noopener" aria-label="Telegram">
+          <img src="assets/images/about/icon-telegram.svg" alt="">
+        </a>
+      </div>
+      <p class="site-footer__copyright">© 2026 ООО «ГЕЙТ» Все права защищены</p>
+    </div>
+  </footer>
+
+</section>
+
+<script src="js/template.js"></script>
+<script src="js/about.js"></script>
+</body>
+</html>
