@@ -40,7 +40,7 @@ body {
 .site-header__logo {
   display: block;
   height: 44px;
-  width: auto;
+  width: 120px;
 }
 
 .site-header__ctas {
@@ -538,6 +538,31 @@ body {
   color: var(--color-white);
 }
 
+/* --- О нас пишут ------------------------------------------------------------ */
+
+.about-press {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 64px;
+  padding: 0 56px;
+}
+
+.about-press__logo {
+  display: flex;
+  align-items: center;
+
+  padding: 11px 15px;
+  border-radius: 110px;
+  background: rgba(194, 194, 194, 0.5);
+}
+
+.about-press__logo img {
+  object-fit: contain;
+  height: 100%;
+}
+
 /* --- Цитаты --------------------------------------------------------------- */
 
 .about-quote {
@@ -546,9 +571,7 @@ body {
   gap: 0;
 }
 
-.about-quote--reverse {
-  flex-direction: row-reverse;
-}
+
 
 .about-quote__card {
   flex: 1;
@@ -564,10 +587,14 @@ body {
 
 .about-quote--reverse .about-quote__card {
   margin-left: -56px;
+  margin-bottom: 70px;
+  margin-top: 30px;
 }
 
 .about-quote:not(.about-quote--reverse) .about-quote__card {
   margin-right: -56px;
+  margin-top: 30px;
+  margin-bottom: 70px;
   z-index: 1;
 }
 
@@ -629,10 +656,19 @@ body {
 
 .about-team__photo {
   width: 100%;
-  aspect-ratio: 239 / 316;
+  height: 316px;
   border-radius: 24px;
-  object-fit: cover;
-  background: var(--color-pic-placeholder);
+  background-color: var(--color-pic-placeholder);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#about-team__card-1 {
+  .about-team__photo {
+    background-size: 500px;
+    background-position-x: -156px;
+  }
 }
 
 .about-team__name {
@@ -928,7 +964,6 @@ body {
 /* --- Футер ------------------------------------------------------------------ */
 
 .site-footer {
-  margin-top: 40px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   background: var(--color-dark-teal);
   color: var(--color-white);
@@ -1010,7 +1045,7 @@ body {
 
 .site-footer__logo {
   height: 47px;
-  width: auto;
+  width: 120px;
 }
 
 .site-footer__social {
