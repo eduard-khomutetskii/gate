@@ -175,6 +175,8 @@ body {
   }
 }
 
+/* --- Общий layout / секции ------------------------------------------------ */
+
 .about {
   display: flex;
   flex-direction: column;
@@ -285,7 +287,6 @@ body {
   justify-content: space-between;
   gap: 12px;
   width: 260px;
-  min-height: 136px;
   padding: 12px 20px;
   border-radius: 12px;
   border: 1.5px solid rgba(255, 255, 255, 0.15);
@@ -302,11 +303,6 @@ body {
   height: 56px;
 }
 
-#aeroclub-logo {
-  width: 148px;
-  height: 56px;
-}
-
 .about-hero__badge-text {
   margin: 0;
   font-weight: 600;
@@ -316,46 +312,40 @@ body {
 
 /* --- Экспертиза -------------------------------------------------------- */
 
-.about-expertise__row {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 40px;
+.about-expertise__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
   width: 100%;
-}
 
-.about-expertise__text {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  max-width: 602px;
-  font-size: 24px;
-  line-height: 1.5;
-  color: var(--color-black);
-}
-
-.about-expertise__text p {
-  margin: 0;
-}
-
-.about-expertise__card {
-  flex-shrink: 0;
-  width: 563px;
-  max-width: 100%;
-  padding: 32px 40px;
-  border-radius: 24px;
-  background: linear-gradient(180deg, #DFECE9 0%, #EEEEEE 100%);
-  font-size: 24px;
-  line-height: 1.5;
-
-  img {
-    margin-bottom: 16px;
+  > div {
+    border-radius: 24px;
   }
 }
 
-.about-expertise__card p {
-  margin: 0;
+.about-expertise__row {
+  grid-area: 1 / 1 / 1 / 3;
+  padding: 105px 40px;
 }
+
+.about-expertise__col {
+  padding: 51px 40px;
+}
+
+.about-expertise_bg-pink {
+  background: linear-gradient(180deg, #ECDFDF 0%, #EEEEEE 100%);
+}
+
+.about-expertise_bg-blue {
+  background: linear-gradient(180deg, #DFECE9 0%, #EEEEEE 100%);
+}
+
+.about-expertise__info {
+  color: #004650;
+  font-size: 24px;
+  margin-top: 16px;
+}
+
 
 /* --- Наша миссия -------------------------------------------------------- */
 
@@ -440,21 +430,21 @@ body {
 }
 
 .about-values__icon {
-  width: 90px;
-  height: 90px;
+  width: 104px;
+  height: 104px;
   object-fit: contain;
   margin-bottom: 24px;
 }
 
 .about-values__icon--heart {
-  width: 110px;
-  height: 92px;
+  width: 124px;
+  height: 108px;
   align-self: flex-end;
 }
 
 .about-values__icon--tech {
-  width: 104px;
-  height: 104px;
+  width: 164px;
+  height: 164px;
 }
 
 .about-values__icon--reliability {
@@ -487,6 +477,12 @@ body {
 
 .about-values__desc a {
   color: inherit;
+  text-decoration: underline;
+}
+
+/* иконка «деньги» — по умолчанию скрыта, показывается на мобильных (см. Responsive) */
+.about-values__icon--money {
+  display: none;
 }
 
 /* --- Логотипы партнёров -------------------------------------------------- */
@@ -501,7 +497,7 @@ body {
   display: flex;
   gap: 40px;
   width: max-content;
-  animation: about-partners-scroll 140s linear infinite;
+  animation: about-partners-scroll 130s linear infinite;
 }
 
 @keyframes about-partners-scroll {
@@ -520,11 +516,18 @@ body {
   }
 }
 
-.about-partners__track img {
+.about-partners__logo {
   height: 32px;
-  width: auto;
-  object-fit: contain;
   opacity: .6;
+  background-color: #004650;
+  -webkit-mask-image: var(--logo);
+          mask-image: var(--logo);
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-size: contain;
+          mask-size: contain;
 }
 
 /* --- Масштаб -------------------------------------------------------------- */
@@ -664,7 +667,6 @@ body {
 /* --- Наша команда ---------------------------------------------------------- */
 
 .about-team__subtitle {
-  margin: -24px 0 0;
   font-size: 24px;
   line-height: 1.3;
   color: var(--color-black);
@@ -685,8 +687,7 @@ body {
 }
 
 .about-team__photo {
-  width: 100%;
-  height: 316px;
+  aspect-ratio: 1 / 1.4;
   border-radius: 24px;
   background-color: var(--color-pic-placeholder);
   background-repeat: no-repeat;
@@ -1091,11 +1092,13 @@ body {
 /* --- Responsive ------------------------------------------------------------- */
 
 @media (max-width: 1200px) {
+  /* Ценности + Масштаб — сетки в 2 колонки */
   .about-values__grid,
   .about-scale__grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  /* Ценности */
   .about-values__card--simplicity,
   .about-values__card--care,
   .about-values__card--tech,
@@ -1109,31 +1112,279 @@ body {
     grid-row: auto;
   }
 
+  /* Команда */
   .about-team__grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 1024px) {
+  /* Экспертиза */
   .about-expertise__row {
     flex-direction: column;
-  }
-
-  .about-quote:not(.about-quote--reverse) {
-    flex-direction: column-reverse;
-
-  }
-
-  .about-quote:not(.about-quote--reverse) .about-quote__card {
-    margin-right: 0;
-    margin-top: 0;
-
   }
 
   .about-expertise__card {
     width: 100%;
   }
 
+  /* Цитаты */
+
+  .about-quote:not(.about-quote--reverse) .about-quote__card {
+    margin-right: 0;
+    margin-top: 0;
+  }
+
+  /* Футер */
+  .site-footer__ctas {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Общий layout */
+  .about-section {
+    padding: 0 40px;
+    gap: 24px;
+  }
+
+  .about-section__title,
+  .about-faq__title,
+  .site-footer__title,
+  .about-cta__title {
+    font-size: 28px;
+  }
+
+  .top-offset_l {
+    margin-top: 80px;
+  }
+
+  /* Hero */
+  .about-hero__content {
+    padding: 64px 20px 40px;
+  }
+
+  .about-hero__title {
+    font-size: 40px;
+  }
+
+  .about-hero__subtitle {
+    font-size: 20px;
+  }
+
+  .about-hero__badge-text {
+    font-size: 12px;
+  }
+
+  #aeroclub-logo {
+    width: 91px;
+    height: 36px;
+  }
+
+  #aeroplus-logo {
+    width: 114px;
+  }
+
+  /* Экспертиза */
+  .about-expertise__info {
+    font-size: 20px;
+  }
+
+  /* Ценности */
+  .about-values__card--reliability {
+    grid-column: auto;
+  }
+
+  .about-values__icon--money {
+    display: block;
+  }
+
+  .about-values__card--reliability {
+    grid-area: 3 / 1 / 3 / 3;
+  }
+
+  .about-values__icon--reliability {
+    position: static;
+    width: 120px;
+    height: 97px;
+    transform: none;
+    margin-bottom: 16px;
+  }
+
+  .about-values__card--efficiency {
+    justify-content: flex-start;
+  }
+
+  .about-values__icon--heart {
+    align-self: flex-start;
+  }
+
+  .about-values__icon {
+    margin-bottom: 16px;
+    width: 80px;
+    height: 69px;
+  }
+
+  .about-values__name {
+    font-size: 24px;
+  }
+
+  /* Партнёры / О нас пишут */
+  .about-partners, .about-press {
+    margin: 80px 0;
+  }
+
+  /* Цитаты */
+  .about-quote__card {
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.16);
+  }
+
+  .about-quote__text {
+    font-size: 16px;
+  }
+
+  .about-quote__name {
+    font-size: 20px;
+  }
+
+
+  .about-quote:not(.about-quote--reverse) .about-quote__card{
+    margin: 0;
+  }
+
+  .about-quote {
+    gap: 0;
+  }
+
+  .about-quote:not(.about-quote--reverse)  {
+    .about-quote__photo {
+      margin: 76px 0;
+      max-width: 315px;
+    }
+
+    .about-quote__card {
+      margin-right: -45px;
+    }
+  }
+
+  .about-quote--reverse  {
+    .about-quote__photo {
+      margin: 21px 0;
+      max-width: 315px;
+    }
+
+    .about-quote__card {
+      margin: 0 0 0 -45px;
+    }
+  }
+
+  /* Команда */
+  .about-team__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* CTA */
+  .about-cta {
+    padding: 40px 20px;
+    border-radius: 40px 40px 0 0;
+  }
+
+  .about-cta__fields {
+    grid-template-columns: 1fr;
+  }
+
+  .about-cta__trips {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  /* FAQ */
+  .about-faq {
+    padding: 40px;
+  }
+
+  .about-faq__question {
+    font-size: 18px;
+    padding: 16px;
+  }
+
+  /* Футер */
+  .site-footer__heading,
+  .site-footer__links   {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .site-footer__links {
+    gap: 24px;
+    justify-content: space-between;
+  }
+
+  .site-footer__ctas {
+    margin-left: 0;
+  }
+
+  .about-mission__title {
+    font-size: 24px;
+  }
+
+  .about-mission__text {
+    font-size: 20px;
+  }
+
+  .about-mission__card {
+    padding: 40px 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Общий layout */
+  .about-section__title {
+    font-size: 21px;
+  }
+
+  /* Экспертиза */
+  .about-expertise__container {
+    grid-template-columns: 1fr;
+  }
+
+  .about-expertise__row {
+    grid-area: auto;
+  }
+
+  /* Миссия */
+  .about-mission__card {
+    padding: 40px 24px;
+  }
+
+  .about-mission__title {
+    font-size: 18px;
+  }
+
+  .about-mission__text {
+    font-size: 16px;
+  }
+
+  /* Ценности */
+  .about-values__card {
+    position: relative;
+
+    img {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-bottom: 0;
+    }
+  }
+
+  /* Масштаб */
+  .about-scale__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Цитаты */
   .about-quote,
   .about-quote--reverse {
     flex-direction: column;
@@ -1157,101 +1408,13 @@ body {
     margin: 0;
   }
 
-  .site-footer__ctas {
-    margin-left: 0;
-  }
-}
-
-@media (max-width: 900px) {
-  .about-scale__grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 768px) {
-  .about-section {
-    padding: 0 20px;
-    margin-top: 64px;
-    gap: 24px;
-  }
-
-  .about-hero__content {
-    padding: 64px 20px 40px;
-  }
-
-  .about-hero__title {
-    font-size: 40px;
-  }
-
-  .about-hero__subtitle {
-    font-size: 20px;
-  }
-
-  .about-section__title,
-  .about-faq__title,
-  .site-footer__title,
-  .about-cta__title {
-    font-size: 28px;
-  }
-
-  .about-values__grid {
-    grid-template-columns: 1fr;
-  }
-
-  .about-values__card--reliability {
-    grid-column: auto;
-  }
-
-  .about-team__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .about-cta {
-    padding: 40px 20px;
-    border-radius: 40px 40px 0 0;
-  }
-
-  .about-cta__fields {
-    grid-template-columns: 1fr;
-  }
-
-  .about-cta__trips {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
-
-  .about-faq {
-    padding: 40px 20px;
-  }
-
-  .about-faq__question {
-    font-size: 18px;
-    padding: 16px;
-  }
-
-  .site-footer__heading,
-  .site-footer__links,
-  .site-footer__bottom {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .site-footer__links {
-    flex-direction: column;
-    gap: 24px;
-  }
-
-  .site-footer__ctas {
-    margin-left: 0;
+  .about-quote__card, .about-quote--reverse .about-quote__card, .about-quote:not(.about-quote--reverse) .about-quote__card {
+    margin-top: -100px;
   }
 }
 
 @media (max-width: 480px) {
-  .about-team__grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
+  /* Hero */
   .about-hero__title {
     font-size: 32px;
   }
@@ -1262,5 +1425,10 @@ body {
 
   .about-hero__badge {
     width: 100%;
+  }
+
+  /* Команда */
+  .about-team__grid {
+    grid-template-columns: 1fr 1fr;
   }
 }
