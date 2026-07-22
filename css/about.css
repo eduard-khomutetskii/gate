@@ -997,7 +997,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  padding: 56px 24px 80px 56px;
+  padding: 24px 16px;
 }
 
 .site-footer__title {
@@ -1473,6 +1473,10 @@ body {
     padding-right: 16px;
   }
 
+  .site-footer__links {
+    padding-top: 0;
+  }
+
   .site-footer__title {
     font-size: 21px;
 
@@ -1546,6 +1550,22 @@ body {
   .top-offset_l {
     margin-top: 64px;
   }
+
+  .about-cta {
+    margin-top: 64px;
+  }
+
+  .about-values__name {
+    font-size: 18px;
+  }
+
+  .about-values__desc {
+    font-size: 16px;
+  }
+
+  .about-hero {
+    min-height: 660px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1558,6 +1578,20 @@ body {
   .about-press {
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  /* О нас пишут — пилюли одной высоты, 2 ряда (3 + 2) */
+  .about-press {
+    gap: 15px 6px;
+  }
+
+  .about-press__logo {
+    padding: 12px 10px;
+  }
+
+  .about-press__logo img {
+    height: 18px;
+    width: auto;
   }
 
   /* Hero */
