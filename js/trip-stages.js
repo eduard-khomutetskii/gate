@@ -45,13 +45,20 @@
       top = Math.max(0, Number(root.dataset.stickyTop) || 0);
       const viewport = document.documentElement.clientHeight;
       const available = Math.max(1, viewport - top);
-      const mobile = matchMedia('(max-width: 640px)').matches;
-      const scale = Math.min(root.clientWidth / (mobile ? 375 : 1440), available / (mobile ? 790 : 1016));
       step = Math.max(420, available * .9);
       root.style.setProperty('--trip-top', `${top}px`);
-      root.style.setProperty('--trip-scale', scale);
+      root.style.setProperty('--trip-viewport-height', `${available}px`);
       root.style.setProperty('--trip-height', `${available + step * (slides.length - 1)}px`);
       root.classList.add('is-enhanced');
+      const stacked = matchMedia('(max-width: 768px)').matches &&
+        !matchMedia('(max-height: 600px) and (min-width: 560px)').matches;
+      slides.forEach((slide) => {
+        const styles = getComputedStyle(slide);
+        const copy = slide.querySelector('.trip-stages__copy');
+        const imageHeight = slide.clientHeight - parseFloat(styles.paddingTop) -
+          parseFloat(styles.paddingBottom) - (stacked ? copy.offsetHeight + parseFloat(styles.rowGap) : 0);
+        slide.style.setProperty('--trip-image-height', `${Math.max(0, imageHeight)}px`);
+      });
       render();
     }
     links.forEach((link, index) => link.addEventListener('click', (event) => {
@@ -65,5 +72,6 @@
     const observer = new ResizeObserver(measure);
     observer.observe(root);
     measure();
+    document.fonts.ready.then(measure);
   });
 })();

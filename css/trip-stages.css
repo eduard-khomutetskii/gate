@@ -1,470 +1,221 @@
-/* All component rules are scoped; template.css is loaded before this file. */
+/* Component styles; load after template.css. */
 @font-face {
     font-family: TripStagesHeading;
     src: url('../fonts/mulish-black.ttf') format('truetype');
     font-weight: 900;
-    font-display: swap
+    font-display: swap;
 }
 
 @font-face {
     font-family: TripStagesHeading;
     src: url('../fonts/mulish-extrabold.ttf') format('truetype');
     font-weight: 800;
-    font-display: swap
+    font-display: swap;
 }
 
 .trip-stages {
     --trip-top: 0px;
-    --trip-height: 100svh;
-    --trip-scale: 1;
+    --trip-viewport-height: calc(100svh - var(--trip-top));
     position: relative;
     color: #fff;
     font-family: Inter, sans-serif;
     font-weight: 400;
     background: #f5f5f5;
-    border-radius: 80px 80px 0 0
+    border-radius: 80px 80px 0 0;
 }
 
 .trip-stages, .trip-stages * {
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 body section.trip-stages {
     padding: 0;
-    margin: 0
-}
-
-.trip-stages__sticky {
-    padding: 64px 56px;
-    min-height: 1016px
+    margin: 0;
 }
 
 .trip-stages__inner {
-    max-width: 1328px;
-    margin: 0 auto
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 64px 56px;
 }
 
 body .trip-stages .trip-stages__title {
-    margin: 0 0 40px;
-    font: 900 48px/1.1 TripStagesHeading, Inter, sans-serif;
+    flex: 0 0 auto;
+    margin: 0 0 clamp(24px, 2.8vw, 40px);
+    font: 900 clamp(28px, 3.34vw, 48px)/1.1 TripStagesHeading, Inter, sans-serif;
     letter-spacing: 0;
     text-align: center;
-    color: #004650
+    color: #004650;
 }
 
 .trip-stages__title span {
-    color: #ff467c
+    color: #ff467c;
 }
 
 .trip-stages__stage {
     position: relative;
-    min-height: 742px;
     border: 2px solid #d9d9d926;
     border-radius: 24px;
     background: linear-gradient(194.071deg, #004650 22.86%, #009fb6 233.38%);
-    overflow: hidden
-}
-
-.trip-stages__slides {
-    position: relative;
-    width: 400px;
-    margin: 230px 0 0 15.1%
+    overflow: hidden;
+    height: 740px;
 }
 
 .trip-stages__slide {
-    margin: 0 0 32px
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(24px, 5vw, 72px);
+    min-height: 600px;
+    padding: 40px clamp(40px, 13.9vw, 200px);
+}
+
+.trip-stages__copy {
+    min-width: 0;
+    max-width: 400px;
 }
 
 .trip-stages__slide h3 {
     margin: 0 0 26px;
-    font: 800 36px/1.15 TripStagesHeading, Inter, sans-serif;
-    letter-spacing: -.72px
+    font: 800 clamp(26px, 2.5vw, 36px)/1.15 TripStagesHeading, Inter, sans-serif;
+    letter-spacing: -.02em;
+    overflow-wrap: break-word;
 }
 
 .trip-stages__slide p {
     margin: 0;
-    font-size: 20px;
-    line-height: 1.5
+    font-size: clamp(16px, 1.39vw, 20px);
+    line-height: 1.5;
 }
 
 .trip-stages__demo {
-    position: relative;
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
-    height: 56px;
-    margin: 26px 0 0 15.1%;
+    max-width: 100%;
+    min-height: 56px;
+    margin-top: 26px;
     padding: 9px 24px;
     border-radius: 68px;
     background: #ff467c;
     color: #fff;
     text-decoration: none;
-    font-size: 18px;
-    white-space: nowrap
+    font-size: clamp(14px, 1.25vw, 18px);
+    line-height: 1.4;
 }
 
 .trip-stages__demo > span {
     display: grid;
     place-items: center;
+    flex: 0 0 38px;
     width: 38px;
     height: 38px;
     border: 2px solid white;
-    border-radius: 50%
+    border-radius: 50%;
 }
 
 .trip-stages__demo img {
     width: 24px;
-    height: 24px
+    height: 24px;
 }
 
 .trip-stages__demo:hover {
-    background: #e93269
+    background: #e93269;
 }
 
 .trip-stages a:focus-visible {
     outline: 3px solid #f1f44f;
-    outline-offset: 5px
+    outline-offset: 5px;
 }
 
 .trip-stages__visual {
-    display: none;
-    position: absolute;
-    left: 60.8%;
-    top: 52.5px;
-    width: 320px;
-    height: 635px;
-    transform-origin: top left
-}
-
-.trip-stages.is-enhanced .trip-stages__visual {
-    display: block
-}
-
-.trip-stages__phone {
-    width: 320px;
-    height: 635px;
-    padding: 19px;
-    background: #f1f44f;
-    border: 1px solid #dcebed;
-    border-radius: 40px;
-    box-shadow: 0 0 48px #d4ff1366
-}
-
-.trip-stages__screen {
-    height: 595px;
-    overflow: hidden;
-    border-radius: 20px;
-    background: #191e27;
-    padding-top: 31.8px;
-    color: #f3f3f3;
-    font: 12.25px/1.43 Inter, sans-serif
-}
-
-.trip-stages__app-header {
-    height: 59.5px;
-    padding: 12.25px 14px;
     display: flex;
     align-items: center;
-    justify-content: space-between
+    justify-content: flex-end;
+    min-width: 0;
+    min-height: 0;
+    height: 100%;
 }
 
-.trip-stages__app-header img:first-child {
-    width: 42.26px;
-    height: 34.55px
-}
-
-.trip-stages__app-header img:last-child {
-    width: 21px;
-    height: 21px
-}
-
-.trip-stages__app-search {
-    display: flex;
-    gap: 7px;
-    align-items: center;
-    margin: 0 14px 14px;
-    padding: 7px;
-    height: 45.5px;
-    border-radius: 7px;
-    background: white;
-    color: #3f4554;
-    white-space: nowrap
-}
-
-.trip-stages__app-search img {
-    width: 21px;
-    height: 21px
-}
-
-.trip-stages__app-search small {
+.trip-stages__visual > img {
     display: block;
-    color: #828690;
-    font-size: 12.25px
-}
-
-.trip-stages__app-dates {
-    display: flex;
-    gap: 5.25px;
-    justify-content: center;
-    padding: 10.5px 0;
-    background: #14161c;
-    overflow: hidden
-}
-
-.trip-stages__app-dates > span {
-    flex-shrink: 0;
-    width: 105px;
-    height: 43.75px;
-    border: 1.75px solid #b4bdc926;
-    border-radius: 5.25px;
-    padding: 5.25px 7px;
-    text-align: center;
-    font-size: 10.5px;
-    color: #b4bdc9
-}
-
-.trip-stages__app-dates > span:nth-child(2) {
-    border-color: #0088d4
-}
-
-.trip-stages__app-dates b {
-    display: block;
-    font-size: 12.25px;
-    color: #f3f3f3;
-    font-weight: 500
-}
-
-.trip-stages__app-filters {
-    display: flex;
-    gap: 7px;
-    margin: 28px 0 17.5px 14px;
-    white-space: nowrap
-}
-
-.trip-stages__app-filters > span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    height: 31.5px;
-    min-width: 31.5px;
-    padding: 0 10.5px;
-    border-radius: 7px;
-    background: #656a7633;
-    color: #b4bdc9;
-    font-size: 14px
-}
-
-.trip-stages__app-filters > span:first-child {
-    background: #f54a7a;
-    padding: 0
-}
-
-.trip-stages__app-filters > span:nth-child(2) {
-    padding: 0
-}
-
-.trip-stages__app-filters img {
-    width: 17.5px;
-    height: 17.5px
-}
-
-.trip-stages__tickets {
-    padding: 0 14px
-}
-
-.trip-stages__badges {
-    display: flex;
-    gap: 5.25px;
-    color: #80c4ea;
-    font-size: 12.25px
-}
-
-.trip-stages__badges span {
-    padding: 2px 7px;
-    background: #33a0dd33;
-    border-radius: 5.25px 5.25px 0 0;
-    white-space: nowrap
-}
-
-.trip-stages__ticket {
-    border: 1.75px solid #b4bdc90f;
-    border-radius: 0 7px 7px;
-    padding: 14px;
-    margin-bottom: 14px
-}
-
-.trip-stages__airline {
-    display: flex;
-    align-items: center;
-    gap: 5.25px;
-    color: #b4bdc9
-}
-
-.trip-stages__airline img {
-    width: 22.75px;
-    height: 22.75px
-}
-
-.trip-stages__route {
-    margin: 14px 0;
-    position: relative
-}
-
-.trip-stages__route b {
-    font-size: 14px;
-    font-weight: 500
-}
-
-.trip-stages__route > span {
-    float: right
-}
-
-.trip-stages__route small {
-    display: block;
-    font-size: 12.25px;
-    line-height: 21px;
-    color: #b4bdc9
-}
-
-.trip-stages__route small span {
-    float: right
-}
-
-.trip-stages__luggage {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    color: #b4bdc9
-}
-
-.trip-stages__luggage img {
-    width: 21px;
-    height: 21px
-}
-
-.trip-stages__luggage > span {
-    color: #a6e4d3
-}
-
-.trip-stages__price {
-    display: flex;
-    gap: 10.5px;
-    margin-top: 14px;
-    align-items: center
-}
-
-.trip-stages__price span, .trip-stages__price b {
-    border: 1px solid #b4bdc926;
-    border-radius: 7px;
-    padding: 6px 12px;
-    color: #b4bdc9;
-    font-weight: 500
-}
-
-.trip-stages__price b {
-    flex: 1;
-    text-align: center;
-    background: #f54a7a;
-    color: white;
-    border: 0
-}
-
-.trip-stages__app-note {
-    display: flex;
-    gap: 5px;
-    color: #80c4ea
-}
-
-.trip-stages__app-note img {
-    width: 14px;
-    height: 14px
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
 
 .trip-stages__pagination {
-    display: none
+    display: none;
 }
 
-/* Progressive enhancement: without JS all six texts remain readable. */
+/* Without JS the complete slides remain in normal document flow. */
 .trip-stages.is-enhanced {
-    height: var(--trip-height)
+    height: var(--trip-height);
 }
 
 .trip-stages.is-enhanced .trip-stages__sticky {
     position: sticky;
     top: var(--trip-top);
-    height: calc(100svh - var(--trip-top));
-    min-height: 0;
-    padding: 0;
+    height: var(--trip-viewport-height);
     overflow: hidden;
-    border-radius: inherit
-}
-
-.trip-stages.is-enhanced .trip-stages__inner {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 1440px;
-    max-width: none;
-    padding: 64px 56px;
-    transform: translate(-50%, -50%) scale(var(--trip-scale));
-    transform-origin: center
+    border-radius: inherit;
 }
 
 .trip-stages.is-enhanced .trip-stages__slides {
-    height: 280px;
-    margin-top: 230px
+    position: absolute;
+    inset: 0;
 }
 
 .trip-stages.is-enhanced .trip-stages__slide {
     position: absolute;
     inset: 0;
+    min-height: 0;
+    grid-template-rows: minmax(0, 1fr);
     opacity: 0;
     visibility: hidden;
-    margin: 0;
-    will-change: transform, opacity
+    will-change: transform, opacity;
 }
 
 .trip-stages.is-enhanced .trip-stages__slide:first-child {
     opacity: 1;
-    visibility: visible
-}
-
-.trip-stages.is-enhanced .trip-stages__demo {
-    position: absolute;
-    top: 454px;
-    left: 15.1%;
-    margin: 0
+    visibility: visible;
 }
 
 .trip-stages.is-enhanced .trip-stages__pagination {
     position: absolute;
+    z-index: 3;
     right: 21px;
     top: 50%;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
-    gap: 8px
+    align-items: center;
+    gap: 8px;
 }
 
 .trip-stages__pagination a {
     position: relative;
     display: block;
+    flex: 0 0 auto;
     width: 12px;
     height: 12px;
     border-radius: 6px;
-    background: #f2fefb
+    background: #f2fefb;
 }
 
 .trip-stages__pagination a::before {
     content: '';
     position: absolute;
-    inset: -4px -8px
+    inset: -4px -8px;
 }
 
 .trip-stages__pagination a[aria-current] {
     height: 28px;
-    background: #a6e4d3
+    background: #a6e4d3;
 }
 
 .trip-stages-preview-next {
@@ -478,7 +229,7 @@ body .trip-stages .trip-stages__title {
     background: #004650;
     color: #fff;
     text-align: center;
-    font: 900 clamp(28px, 4vw, 48px)/1.2 TripStagesHeading, Inter, sans-serif
+    font: 900 clamp(28px, 4vw, 48px)/1.2 TripStagesHeading, Inter, sans-serif;
 }
 
 .trip-stages-preview-next a {
@@ -486,587 +237,213 @@ body .trip-stages .trip-stages__title {
     border-radius: 40px;
     background: #ff467c;
     padding: 16px 28px;
-    color: white
+    color: white;
 }
 
-@media (max-width: 640px) {
-    .trip-stages {
-        border-radius: 32px 32px 0 0
-    }
-
-    .trip-stages__sticky {
-        padding: 32px 16px;
-        min-height: 0
-    }
-
-    body .trip-stages .trip-stages__title {
-        font-size: 28px;
-        margin-bottom: 24px
-    }
-
-    .trip-stages__stage {
-        min-height: 650px;
-        border-radius: 20px;
-        padding: 28px 24px
-    }
-
-    .trip-stages__slides {
-        width: auto;
-        margin: 0
-    }
-
-    .trip-stages__slide h3 {
-        font-size: 26px;
-        line-height: 1.15;
-        letter-spacing: -.52px;
-        margin-bottom: 16px
-    }
-
-    .trip-stages__slide p {
-        font-size: 15px;
-        line-height: 1.5
-    }
-
-    .trip-stages__visual {
-        left: 50%;
-        top: 310px;
-        transform: translateX(-50%) scale(.43);
-        transform-origin: top center
+@media (max-width: 1100px) {
+    .trip-stages__slide {
+        padding: 32px 56px;
+        gap: 32px;
     }
 
     .trip-stages__demo {
-        margin: 0;
-        font-size: 14px;
         padding: 8px 16px;
-        height: 44px
+    }
+}
+
+@media (max-width: 768px) {
+    .trip-stages {
+        border-radius: 32px 32px 0 0;
+    }
+
+    .trip-stages__inner {
+        padding: 24px 16px;
+    }
+
+    body .trip-stages .trip-stages__title {
+        font-size: clamp(20px, 4.7vw, 32px);
+        margin-bottom: 20px;
+    }
+
+    .trip-stages__stage {
+        border-radius: 20px;
+    }
+
+    .trip-stages__slide,
+    .trip-stages.is-enhanced .trip-stages__slide {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto minmax(0, 1fr);
+        align-items: start;
+        gap: 20px;
+        padding: 32px 16px 80px 16px;
+    }
+
+    .trip-stages__copy {
+        width: 100%;
+        text-align: center;
+        justify-self: center;
+    }
+
+    .trip-stages__slide h3 {
+        font-size: clamp(22px, 4.5vw, 28px);
+        margin-bottom: 12px;
+    }
+
+    .trip-stages__slide p {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .trip-stages__demo {
+        min-height: 44px;
+        margin-top: 16px;
+        font-size: 14px;
     }
 
     .trip-stages__demo > span {
+        flex-basis: 28px;
         width: 28px;
-        height: 28px
+        height: 28px;
     }
 
     .trip-stages__demo img {
         width: 18px;
-        height: 18px
+        height: 18px;
     }
 
-    .trip-stages.is-enhanced .trip-stages__inner {
-        width: 375px;
-        padding: 28px 16px
+    .trip-stages__visual {
+        height: auto;
+        justify-content: center;
     }
 
-    .trip-stages.is-enhanced .trip-stages__slides {
-        margin: 0;
-        height: 220px
-    }
-
-    .trip-stages.is-enhanced .trip-stages__demo {
-        top: 236px;
-        left: 24px
+    .trip-stages__visual > img {
+        width: auto;
+        height: auto;
+        max-width: min(100%, 420px);
+        max-height: var(--trip-image-height, none);
     }
 
     .trip-stages.is-enhanced .trip-stages__pagination {
         right: 50%;
         top: auto;
-        bottom: 20px;
+        bottom: 40px;
         transform: translateX(50%);
         flex-direction: row;
-        align-items: center;
-        gap: 8px
     }
 
     .trip-stages__pagination a {
         width: 9px;
-        height: 9px
+        height: 9px;
     }
 
     .trip-stages__pagination a[aria-current] {
         width: 24px;
-        height: 9px
+        height: 9px;
+    }
+}
+
+/* Compact two-column layout for short windows and landscape phones. */
+@media (max-height: 600px) and (min-width: 560px) {
+    .trip-stages__inner {
+        padding: 12px 16px;
+    }
+
+    body .trip-stages .trip-stages__title {
+        font-size: clamp(20px, 3vw, 28px);
+        margin-bottom: 12px;
+    }
+
+    .trip-stages__slide,
+    .trip-stages.is-enhanced .trip-stages__slide {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        grid-template-rows: minmax(0, 1fr);
+        align-items: center;
+        gap: 16px;
+        padding: 16px 40px 16px 20px;
+    }
+
+    .trip-stages__slide h3 {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .trip-stages__slide p {
+        font-size: 12px;
+        line-height: 1.35;
+    }
+
+    .trip-stages__demo {
+        min-height: 36px;
+        margin-top: 10px;
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .trip-stages__demo > span {
+        flex-basis: 24px;
+        width: 24px;
+        height: 24px;
+    }
+
+    .trip-stages__demo img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .trip-stages.is-enhanced .trip-stages__pagination {
+        right: 14px;
+        top: 50%;
+        bottom: auto;
+        transform: translateY(-50%);
+        flex-direction: column;
+    }
+
+    .trip-stages__pagination a {
+        width: 8px;
+        height: 8px;
+    }
+
+    .trip-stages__pagination a[aria-current] {
+        width: 8px;
+        height: 20px;
+    }
+}
+
+@media (max-height: 600px) and (max-width: 559px) {
+    .trip-stages__inner {
+        padding: 16px 12px;
+    }
+
+    body .trip-stages .trip-stages__title {
+        font-size: 18px;
+        margin-bottom: 14px;
+    }
+
+    .trip-stages__slide,
+    .trip-stages.is-enhanced .trip-stages__slide {
+        gap: 12px;
+        padding: 18px 18px 40px;
+    }
+
+    .trip-stages__slide h3 {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .trip-stages__slide p {
+        font-size: 13px;
+    }
+
+    .trip-stages__demo {
+        margin-top: 12px;
+        min-height: 40px;
+        font-size: 13px;
+        padding: 6px 12px;
     }
 }
 
 @media (prefers-reduced-motion: reduce) {
     .trip-stages__slide {
-        will-change: auto !important
-    }
-}
-
-/* Each slide is a complete scene, including its illustration and action. */
-.trip-stages__slides {
-    width: auto;
-    margin: 0
-}
-
-.trip-stages__slide {
-    position: relative;
-    min-height: 742px;
-    margin: 0
-}
-
-.trip-stages__copy {
-    position: absolute;
-    left: 15.1%;
-    top: 230px;
-    width: 400px
-}
-
-.trip-stages .trip-stages__copy .trip-stages__demo {
-    position: relative;
-    top: auto;
-    left: auto;
-    margin: 26px 0 0
-}
-
-.trip-stages.is-enhanced .trip-stages__slides {
-    position: absolute;
-    inset: 0;
-    width: auto;
-    height: auto;
-    margin: 0
-}
-
-.trip-stages.is-enhanced .trip-stages__slide {
-    min-height: 0;
-    inset: 0;
-    overflow: hidden
-}
-
-.trip-stages__pagination {
-    z-index: 3
-}
-
-.trip-stages__art {
-    position: absolute;
-    left: 56%;
-    top: 145px;
-    width: 480px;
-    height: 460px;
-    color: #004650;
-    font: 16px/1.5 Inter, sans-serif
-}
-
-.trip-stages__panel {
-    padding: 28px;
-    background: #f2fefb;
-    border: 1px solid #dcebed;
-    border-radius: 28px;
-    box-shadow: 0 20px 60px #00252e40
-}
-
-.trip-stages__art h4 {
-    margin: 14px 0 24px;
-    font: 800 25px/1.2 TripStagesHeading, Inter, sans-serif;
-    color: #004650
-}
-
-.trip-stages__art-icon {
-    display: grid;
-    place-items: center;
-    width: 56px;
-    height: 56px;
-    background: #a6e4d3;
-    border-radius: 18px
-}
-
-.trip-stages__art-icon img {
-    width: 40px;
-    height: 40px
-}
-
-.trip-stages__panel-toolbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 0 16px;
-    font-size: 15px
-}
-
-.trip-stages__panel-toolbar > span {
-    padding: 6px 12px;
-    border-radius: 20px;
-    background: #ff467c;
-    color: #fff;
-    font-size: 12px
-}
-
-.trip-stages__person {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 16px 0;
-    border-top: 1px solid #dcebed;
-    font-size: 14px
-}
-
-.trip-stages__person > i {
-    display: grid;
-    place-items: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #dcebed;
-    color: #004650;
-    font: 800 14px Inter, sans-serif
-}
-
-.trip-stages__person:nth-of-type(3) > i {
-    background: #f1f44f
-}
-
-.trip-stages__person small {
-    display: block;
-    color: #697f84;
-    font-size: 11px
-}
-
-.trip-stages__person > b {
-    margin-left: auto;
-    font-size: 10px;
-    font-weight: 500;
-    padding: 4px 8px;
-    border-radius: 8px;
-    background: #dcebed
-}
-
-.trip-stages__panel-foot {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid #dcebed;
-    margin-top: 10px;
-    padding-top: 18px;
-    font-size: 13px
-}
-
-.trip-stages__panel-foot > span {
-    color: #16846a;
-    font-weight: 600
-}
-
-.trip-stages__float {
-    position: absolute;
-    right: -14px;
-    bottom: -18px;
-    padding: 16px 22px;
-    border-radius: 16px;
-    background: #f1f44f;
-    color: #004650;
-    box-shadow: 0 10px 40px #00252e30;
-    font-weight: 600;
-    font-size: 15px;
-    transform: rotate(-3deg)
-}
-
-.trip-stages__art--employees {
-    top: 125px
-}
-
-.trip-stages__art--employees .trip-stages__float {
-    top: 510px;
-    bottom: auto
-}
-
-.trip-stages__art--policy {
-    top: 112px
-}
-
-.trip-stages__rule {
-    display: flex;
-    justify-content: space-between;
-    padding: 14px 0;
-    border-top: 1px solid #dcebed;
-    font-size: 14px
-}
-
-.trip-stages__rule strong {
-    font-size: 14px;
-    font-weight: 600
-}
-
-.trip-stages__approval {
-    display: grid;
-    grid-template-columns:30px 1fr;
-    gap: 6px 12px;
-    margin-top: 18px;
-    align-items: center;
-    font-size: 14px
-}
-
-.trip-stages__approval > i {
-    display: grid;
-    place-items: center;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background: #a6e4d3;
-    font-style: normal
-}
-
-.trip-stages__approval > em {
-    grid-column: 1;
-    text-align: center;
-    line-height: 12px;
-    color: #86b7ae;
-    font-style: normal
-}
-
-.trip-stages__approval > em + i {
-    grid-column: 1
-}
-
-.trip-stages__art--policy .trip-stages__float {
-    bottom: -55px
-}
-
-.trip-stages__bank-card {
-    position: relative;
-    width: 420px;
-    height: 240px;
-    padding: 28px;
-    border: 1px solid #c3f0df;
-    border-radius: 25px;
-    background: linear-gradient(120deg, #a6e4d3, #f1f44f);
-    box-shadow: 0 15px 45px #00252e40;
-    transform: rotate(-7deg)
-}
-
-.trip-stages__bank-card > img {
-    width: 42px;
-    height: 35px;
-    filter: brightness(.35)
-}
-
-.trip-stages__bank-card > span {
-    display: block;
-    margin: 22px 0 3px;
-    font-size: 13px
-}
-
-.trip-stages__bank-card > strong {
-    font: 800 30px/1.2 TripStagesHeading, Inter, sans-serif
-}
-
-.trip-stages__bank-card > b {
-    display: block;
-    font-size: 18px
-}
-
-.trip-stages__bank-card > small {
-    position: absolute;
-    right: 25px;
-    bottom: 25px;
-    font-size: 10px;
-    letter-spacing: 2px
-}
-
-.trip-stages__payment-methods {
-    position: absolute;
-    right: 0;
-    top: 175px;
-    width: 310px;
-    padding: 24px;
-    border: 1px solid #dcebed;
-    border-radius: 22px;
-    background: #f2fefb;
-    box-shadow: 0 20px 40px #00252e40;
-    transform: rotate(4deg)
-}
-
-.trip-stages__payment-methods h4 {
-    font-size: 20px;
-    margin: 14px 0
-}
-
-.trip-stages__payment-methods > div {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
-    border-top: 1px solid #dcebed;
-    font-size: 14px
-}
-
-.trip-stages__payment-methods > div > span {
-    color: #16846a
-}
-
-.trip-stages__art--documents {
-    top: 160px
-}
-
-.trip-stages__document {
-    position: absolute;
-    width: 280px;
-    height: 350px;
-    padding: 26px 22px;
-    border: 1px solid #dcebed;
-    border-radius: 14px;
-    background: #fff;
-    box-shadow: 0 20px 50px #00252e40
-}
-
-.trip-stages__document--back {
-    left: 160px;
-    top: -25px;
-    transform: rotate(9deg)
-}
-
-.trip-stages__document--front {
-    left: 5px;
-    top: 65px;
-    transform: rotate(-8deg)
-}
-
-.trip-stages__document h4 {
-    font-size: 23px;
-    margin: 20px 0
-}
-
-.trip-stages__document > div {
-    display: flex;
-    justify-content: space-between;
-    padding: 12px 0;
-    border-top: 1px solid #dcebed;
-    font-size: 12px
-}
-
-.trip-stages__document b {
-    float: right;
-    font-size: 12px;
-    font-weight: 600
-}
-
-.trip-stages__document > strong {
-    display: block;
-    border-top: 1px solid #dcebed;
-    padding-top: 16px;
-    font-size: 13px
-}
-
-.trip-stages__doc-logo {
-    width: 81px;
-    height: 32px
-}
-
-.trip-stages__stamp {
-    position: absolute;
-    bottom: 35px;
-    right: 20px;
-    padding: 10px 14px;
-    border: 2px solid #16846a;
-    border-radius: 5px;
-    color: #16846a;
-    text-align: center;
-    font-size: 13px;
-    transform: rotate(-8deg)
-}
-
-.trip-stages__art--documents .trip-stages__float {
-    bottom: -5px
-}
-
-.trip-stages__art--analytics {
-    top: 122px
-}
-
-.trip-stages__metric span {
-    display: block;
-    color: #697f84;
-    font-size: 13px
-}
-
-.trip-stages__metric strong {
-    display: block;
-    font: 800 32px/1.4 TripStagesHeading, Inter, sans-serif;
-    color: #004650
-}
-
-.trip-stages__metric small {
-    font-size: 12px;
-    color: #697f84
-}
-
-.trip-stages__chart {
-    display: flex;
-    gap: 18px;
-    align-items: flex-end;
-    height: 150px;
-    padding: 16px 10px 0;
-    border-bottom: 1px solid #c5dfd7;
-    background: repeating-linear-gradient(to top, transparent 0, transparent 48px, #dcebed 49px, #dcebed 50px)
-}
-
-.trip-stages__chart i {
-    flex: 1;
-    height: var(--bar);
-    border-radius: 7px 7px 0 0;
-    background: #a6e4d3
-}
-
-.trip-stages__chart i:last-child {
-    background: #ff467c
-}
-
-.trip-stages__chart-labels {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 8px;
-    font-size: 11px;
-    color: #697f84
-}
-
-.trip-stages__art--analytics .trip-stages__float {
-    top: 510px;
-    bottom: auto
-}
-
-.trip-stages__document--back .trip-stages__stamp {
-    bottom: 12px
-}
-
-@media (max-width: 640px) {
-    .trip-stages__slide {
-        min-height: 650px
-    }
-
-    .trip-stages__copy {
-        left: 24px;
-        right: 24px;
-        top: 28px;
-        width: auto
-    }
-
-    .trip-stages__copy p {
-        font-size: 14px;
-        line-height: 1.4
-    }
-
-    .trip-stages .trip-stages__copy .trip-stages__demo {
-        position: absolute;
-        top: 208px;
-        left: 0;
-        margin: 0
-    }
-
-    .trip-stages__art {
-        left: 50%;
-        top: 330px;
-        width: 480px;
-        height: 460px;
-        transform: translateX(-50%) scale(.5);
-        transform-origin: top center
-    }
-
-    .trip-stages__art--payment {
-        top: 320px
-    }
-
-    .trip-stages__art--documents {
-        top: 340px
-    }
-
-    .trip-stages__art--employees, .trip-stages__art--policy, .trip-stages__art--analytics {
-        top: 315px
+        will-change: auto !important;
     }
 }

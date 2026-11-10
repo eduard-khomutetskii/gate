@@ -1,0 +1,29 @@
+- generic [active] [ref=f5e1]:
+  - region "Все этапы командировки — под контролем" [ref=f5e2]:
+    - generic [ref=f5e4]:
+      - heading "Все этапы командировки — под контролем" [level=2] [ref=f5e5]: Все этапы командировки —под контролем
+      - generic [ref=f5e6]:
+        - article [ref=f5e8]:
+          - generic [ref=f5e9]:
+            - heading "Удобный личный кабинет" [level=3] [ref=f5e10]: Удобныйличный кабинет
+            - paragraph [ref=f5e11]: Бронируйте билеты и размещение так же легко, как в привычных сервисах для путешествий
+            - link "Посмотреть демонстрацию GATE" [ref=f5e12] [cursor=pointer]:
+              - /url: https://go.gate.ru/
+              - text: Посмотреть демонстрацию
+        - navigation "Этапы командировки" [ref=f5e15]:
+          - link "1. Личный кабинет" [ref=f5e16] [cursor=pointer]:
+            - /url: "#trip-stage-1"
+          - link "2. Сотрудники и роли" [ref=f5e17] [cursor=pointer]:
+            - /url: "#trip-stage-2"
+          - link "3. Тревел-политика" [ref=f5e18] [cursor=pointer]:
+            - /url: "#trip-stage-3"
+          - link "4. Оплата" [ref=f5e19] [cursor=pointer]:
+            - /url: "#trip-stage-4"
+          - link "5. Интеграция" [ref=f5e20] [cursor=pointer]:
+            - /url: "#trip-stage-5"
+          - link "6. Аналитика" [ref=f5e21] [cursor=pointer]:
+            - /url: "#trip-stage-6"
+  - generic [ref=f5e22]:
+    - paragraph [ref=f5e23]: Все инструменты для ваших командировок
+    - link "Подключиться к GATE ↗" [ref=f5e24] [cursor=pointer]:
+      - /url: https://go.gate.ru/signup
