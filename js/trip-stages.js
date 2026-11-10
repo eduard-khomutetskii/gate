@@ -10,13 +10,14 @@
     const motion = matchMedia('(prefers-reduced-motion: reduce)');
     let step = 1;
     let top = 0;
+    let intro = 0;
     let frame = 0;
     let active = -1;
     const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
 
     function render() {
       frame = 0;
-      const progress = clamp((top - root.getBoundingClientRect().top) / step, 0, slides.length - 1);
+      const progress = clamp((top - root.getBoundingClientRect().top - intro) / step, 0, slides.length - 1);
       const current = Math.min(slides.length - 1, Math.floor(progress + .5));
       slides.forEach((slide, index) => {
         const distance = index - progress;
@@ -45,10 +46,11 @@
       top = Math.max(0, Number(root.dataset.stickyTop) || 0);
       const viewport = document.documentElement.clientHeight;
       const available = Math.max(1, viewport - top);
+      intro = root.querySelector('.trip-stages__heading').offsetHeight;
       step = Math.max(420, available * .9);
       root.style.setProperty('--trip-top', `${top}px`);
       root.style.setProperty('--trip-viewport-height', `${available}px`);
-      root.style.setProperty('--trip-height', `${available + step * (slides.length - 1)}px`);
+      root.style.setProperty('--trip-height', `${intro + available + step * (slides.length - 1)}px`);
       root.classList.add('is-enhanced');
       const stacked = matchMedia('(max-width: 768px)').matches &&
         !matchMedia('(max-height: 600px) and (min-width: 560px)').matches;
@@ -63,7 +65,7 @@
     }
     links.forEach((link, index) => link.addEventListener('click', (event) => {
       event.preventDefault();
-      window.scrollTo({ top: window.scrollY + root.getBoundingClientRect().top - top + step * index, behavior: motion.matches ? 'instant' : 'smooth' });
+      window.scrollTo({ top: window.scrollY + root.getBoundingClientRect().top + intro - top + step * index, behavior: motion.matches ? 'instant' : 'smooth' });
     }));
     window.addEventListener('scroll', schedule, { passive: true });
     window.addEventListener('resize', measure);
