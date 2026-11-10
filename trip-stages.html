@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Все этапы командировки — GATE</title>
+  <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/template.css">
+  <link rel="stylesheet" href="css/trip-stages.css">
+  <script src="js/trip-stages.js" defer></script>
+</head>
+<body>
+<!-- Для внедрения перенесите section вместе с подключениями CSS и JS.
+     data-sticky-top задаёт отступ под фиксированную шапку в пикселях. -->
+<section class="trip-stages" data-trip-stages data-sticky-top="0" aria-labelledby="trip-stages-title">
+  <div class="trip-stages__sticky">
+    <div class="trip-stages__inner">
+      <h2 class="trip-stages__title" id="trip-stages-title">Все этапы командировки —<br><span>под контролем</span></h2>
+      <div class="trip-stages__stage">
+        <div class="trip-stages__slides">
+          <article class="trip-stages__slide" id="trip-stage-1">
+            <div class="trip-stages__copy"><h3>Удобный<br>личный кабинет</h3>
+              <p>Бронируйте билеты и размещение так же легко, как в привычных сервисах для путешествий</p>
+              <a class="trip-stages__demo" href="https://go.gate.ru/" aria-label="Посмотреть демонстрацию GATE">Посмотреть
+                демонстрацию<span><img src="assets/images/trip-stages/play.svg" alt=""></span></a></div>
+            <div class="trip-stages__visual" aria-hidden="true">
+              <img src="assets/images/trip-stages/slide_1.png" alt="">
+            </div>
+          </article>
+          <article class="trip-stages__slide" id="trip-stage-2">
+            <div class="trip-stages__copy"><h3>Управление<br>сотрудниками и ролями</h3>
+              <p>Импортируйте данные из корпоративных систем через API, приглашайте пользователей по email, назначайте
+                роли и права доступа</p>
+              <a class="trip-stages__demo" href="https://go.gate.ru/" aria-label="Посмотреть демонстрацию GATE">Посмотреть
+                демонстрацию<span><img src="assets/images/trip-stages/play.svg" alt=""></span></a></div>
+            <div class="trip-stages__visual" aria-hidden="true">
+              <img src="assets/images/trip-stages/slide_2.png" alt="">
+            </div>
+          </article>
+          <article class="trip-stages__slide" id="trip-stage-3">
+            <div class="trip-stages__copy"><h3>Тревел-политика<br>и согласование</h3>
+              <p>Настройте лимиты расходов, правила бронирования и маршруты согласования</p>
+              <a class="trip-stages__demo" href="https://go.gate.ru/" aria-label="Посмотреть демонстрацию GATE">Посмотреть
+                демонстрацию<span><img src="assets/images/trip-stages/play.svg" alt=""></span></a></div>
+            <div class="trip-stages__visual" aria-hidden="true">
+              <img src="assets/images/trip-stages/slide_3.png" alt="">
+            </div>
+          </article>
+          <article class="trip-stages__slide" id="trip-stage-4">
+            <div class="trip-stages__copy"><h3>Гибкие условия<br>оплаты</h3>
+              <p>Оплачивайте командировки с постоплатой до 30 дней, с расчётного счета, банковской картой или по
+                QR-коду</p>
+              <a class="trip-stages__demo" href="https://go.gate.ru/" aria-label="Посмотреть демонстрацию GATE">Посмотреть
+                демонстрацию<span><img src="assets/images/trip-stages/play.svg" alt=""></span></a></div>
+            <div class="trip-stages__visual" aria-hidden="true">
+              <img src="assets/images/trip-stages/slide_4.png" alt="">
+            </div>
+          </article>
+          <article class="trip-stages__slide" id="trip-stage-5">
+            <div class="trip-stages__copy"><h3>Интеграция<br>с 1С и ЭДО</h3>
+              <p>Передавайте данные в 1С, обменивайтесь документами через ЭДО и автоматически получайте закрывающие
+                документы</p>
+              <a class="trip-stages__demo" href="https://go.gate.ru/" aria-label="Посмотреть демонстрацию GATE">Посмотреть
+                демонстрацию<span><img src="assets/images/trip-stages/play.svg" alt=""></span></a></div>
+            <div class="trip-stages__visual" aria-hidden="true">
+              <img src="assets/images/trip-stages/slide_5.png" alt="">
+            </div>
+          </article>
+          <article class="trip-stages__slide" id="trip-stage-6">
+            <div class="trip-stages__copy"><h3>Аналитика<br>и отчётность</h3>
+              <p>Получайте аналитику по расходам, сотрудникам и подразделениям для управления бюджетом</p>
+              <a class="trip-stages__demo" href="https://go.gate.ru/" aria-label="Посмотреть демонстрацию GATE">Посмотреть
+                демонстрацию<span><img src="assets/images/trip-stages/play.svg" alt=""></span></a></div>
+            <div class="trip-stages__visual" aria-hidden="true">
+              <img src="assets/images/trip-stages/slide_6.png" alt="">
+            </div>
+          </article>
+        </div>
+        <nav class="trip-stages__pagination" aria-label="Этапы командировки">
+          <a href="#trip-stage-1" aria-label="1. Личный кабинет" aria-current="step"></a>
+          <a href="#trip-stage-2" aria-label="2. Сотрудники и роли"></a>
+          <a href="#trip-stage-3" aria-label="3. Тревел-политика"></a>
+          <a href="#trip-stage-4" aria-label="4. Оплата"></a>
+          <a href="#trip-stage-5" aria-label="5. Интеграция"></a>
+          <a href="#trip-stage-6" aria-label="6. Аналитика"></a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Только для демонстрации выхода из закреплённого блока. -->
+<div class="trip-stages-preview-next"><p>Все инструменты для ваших командировок</p><a href="https://go.gate.ru/signup">Подключиться
+  к GATE ↗</a></div>
+</body>
+</html>
